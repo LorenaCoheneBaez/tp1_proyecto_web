@@ -14,29 +14,51 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body class="loading">
+<body class="loading light">
 
   <!-- =========================
        ⏳ LOADER (modo claro)
   ========================== -->
- <div id="loader" class="loader light">
+  <div id="loader" class="loader light">
 
-  <!-- Caja -->
-  <div class="loader-box">
-    <h2>¡Bienvenidos!</h2>
-    <p>Estas entrando al portal</p>
+    <!-- Caja clara -->
+    <div class="loader-box loader-box-light">
+      <h2>¡Bienvenidos!</h2>
+      <p>Estas entrando al portafolio</p>
+    </div>
+
+    <!-- Silueta bicicletas -->
+    <img src="img/welcome_home.png" class="bikes" alt="bicletas">
+
   </div>
 
-  <!-- Silueta bicicletas -->
-  <img src="img/welcome_home.png" class="bikes" alt="bicicletas">
+  <!-- =========================
+       ⏳ LOADER (modo oscuro)
+  ========================== -->
+  <div id="loader-dark" class="loader dark" style="display: none;">
 
-</div>
+    <!-- Caja oscura -->
+    <div class="loader-box loader-box-dark">
+      <h2>Bienvenido al Infierno...</h2>
+      <p>Has cruzado al Upside Down</p>
+    </div>
+
+    <!-- Silueta -->
+    <img src="img/welcome_hell.png" class="bikes" alt="silueta">
+
+  </div>
 
   <!-- =========================
        🧭 HEADER / NAV
   ========================== -->
   <header class="header">
-    <nav class="nav">
+    <img src="img/logo_devs.png" alt="Logo" class="logo-img">
+    <button class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav" id="nav">
       <a href="index.html" class="nav-link active">Home</a>
       <a href="bitacora.html" class="nav-link">Bitácora</a>
       <button id="theme-toggle" class="theme-btn">
@@ -58,34 +80,33 @@
         <p class="descripcion">Descubre las habilidades de nuestros expertos.</p>
       </div>
 
+      <section class="about">
+        <h2>Sobre Nosotros</h2>
+
+        <p>
+          Somos un equipo de cinco desarrolladores en formación que decidieron unir sus habilidades
+          para construir algo más que una simple página web. Este proyecto representa nuestro primer
+          trabajo conjunto como equipo, donde cada integrante aporta su propia visión, estilo y forma
+          de entender el desarrollo.
+        </p>
+
+        <p>
+          Inspirados en la dualidad entre lo cotidiano y lo desconocido, diseñamos una experiencia que
+          refleja dos mundos: uno visible, ordenado y familiar… y otro oculto, oscuro e impredecible.
+          Así como en Hawkins, detrás de cada interfaz existe una capa más profunda donde la creatividad,
+          la lógica y la experimentación se entrelazan.
+        </p>
+
+        <p>
+          Nuestro objetivo es crear una plataforma que no solo muestre quiénes somos, sino también cómo
+          pensamos, cómo construimos y cómo transformamos ideas en experiencias digitales. Cada perfil,
+          cada interacción y cada detalle está pensado como parte de este universo que estamos desarrollando.
+        </p>
+      </section>
+
       <section class="grid">
-        <!--
+
         <div class="card" data-link="integrante1.html">
-          <img src="img/max_light.png" alt="Max">
-          <h2>Max</h2>
-          <p>Frontend Developer</p>
-          <button>Ver Perfil</button>
-        </div>
-        <div class="card" data-link="integrante2.html">
-          <img src="img/nancy_light.png" alt="Nancy">
-          <h2>Nancy</h2>
-          <p>Backend Developer</p>
-          <button>Ver Perfil</button>
-        </div>
-        <div class="card" data-link="integrante3.html">
-          <img src="img/steve_light.png" alt="Steve">
-          <h2>Steve</h2>
-          <p>QA Tester</p>
-          <button>Ver Perfil</button>
-        </div>
-        <div class="card" data-link="integrante4.html">
-          <img src="img/integrante4.png" alt="Integrante 4">
-          <h2>Max</h2>
-          <p>Frontend Developer</p>
-          <button>Ver Perfil</button>
-        </div>
-          -->
-        <div class="card">
           <div class="card-frame">
             <div class="card-image">
               <img src="img/max_light.png" alt="Max">
