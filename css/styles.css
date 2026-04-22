@@ -13,16 +13,15 @@
 body {
   font-family: 'Inter', sans-serif;
   background: #d6dee4;
-  transition: opacity 0.4s ease;
+  transition: background 0.5s ease, filter 0.5s ease;
 }
 
-/* Oculta scroll mientras carga */
 body.loading {
   overflow: hidden;
 }
 
 /* =========================
-   ⏳ LOADER BASE
+   ⏳ LOADER
 ========================= */
 .loader {
   position: fixed;
@@ -30,96 +29,72 @@ body.loading {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 9999;
 
   display: flex;
   justify-content: center;
   align-items: center;
+
+  transition: opacity 0.6s ease;
+  z-index: 9999;
 }
 
-/* =========================
-   🌤️ FONDOS LOADER
-========================= */
-.loader.light {
+/* fondos dinámicos */
+body.light #loader {
   background: url('../img/loading_light.png') center/cover no-repeat;
 }
 
-.loader.dark {
+body.dark #loader {
   background: url('../img/loading_dark.png') center/cover no-repeat;
 }
 
-/* =========================
-   📦 CAJA CENTRAL
-========================= */
+/* caja */
 .loader-box {
+  position: relative;
   display: flex;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0.9);
+  align-items: center;
+  background: rgba(255,255,255,0.9);
   padding: 120px 200px;
   border-radius: 15px;
   text-align: center;
-
-  z-index: 1; /* arriba de las bicis */
-
+  z-index: 1;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-.loader-box-light {
-  background: rgba(255, 255, 255, 0.9);
+.loader-box h2 {
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 10px;
 }
 
-.loader-box-dark {
-  background: rgba(255, 255, 255, 0.9);
-}
-
-.loader-box-dark h2,
-.loader-box-dark p {
-  color: black;
-}
-
-/* =========================
-   🚲 SILUETA BICICLETAS
-========================= */
+/* imagen */
 .bikes {
   position: absolute;
-  bottom: 30%; /* ajustá según tu imagen */
+  bottom: 30%;
   width: 220px;
 
-  z-index: 2; /* detrás del cuadro */
-
-  pointer-events: none;
+  z-index: 2;
 }
 
 /* =========================
-   🚲 SILUETA DEMON
-========================= */
-.demon {
-  position: absolute;
-  bottom: 30%; /* ajustá según tu imagen */
-  width: 220px;
-
-  z-index: 2; /* detrás del cuadro */
-
-  pointer-events: none;
-}
-
-/* =========================
-   🧭 HEADER / NAV
+   🧭 HEADER
 ========================= */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   padding: 15px 40px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0,0,0,0.85);
   min-height: 80px;
-  position: relative;
 }
 
 .logo-img {
-  height: 100px;
+  height: 80px;
 }
 
+/* =========================
+   🍔 MENU
+========================= */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -127,22 +102,15 @@ body.loading {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
 }
 
 .menu-toggle span {
   width: 25px;
   height: 3px;
   background: white;
-  border-radius: 2px;
 }
 
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
+/* NAV */
 .nav {
   display: flex;
   align-items: center;
@@ -154,7 +122,6 @@ body.loading {
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s;
-  cursor: pointer;
 }
 
 .nav-link:hover,
@@ -162,6 +129,9 @@ body.loading {
   color: #a80000;
 }
 
+/* =========================
+   🌗 THEME BUTTON
+========================= */
 .theme-btn {
   background: none;
   border: none;
@@ -169,172 +139,74 @@ body.loading {
 }
 
 .theme-btn img {
-  width: 124px;
-  height: 84px;
+  width: 110px;
   transition: transform 0.3s ease;
 }
 
 .theme-btn:hover img {
-  transform: scale(1.15);
+  transform: scale(1.1);
 }
 
-.back-link {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.back-link:hover {
-  color: #a80000;
-}
-
-.back-btn {
-  display: inline-block;
-  position: absolute;
-  left: 20px;
-  top: 160px;
-}
-
-.back-btn img {
-  width: 80px;
-  height: auto;
-}
-/*
-.profile .back-btn {
-  position: absolute;
-  left: 20px;
-  top: 90px;
-}
-
-.home .back-btn {
-  position: absolute;
-  left: 20px;
-  top: 90px;
-}
-
-.back-btn img {
-  width: 100px;
-  height: auto;
-}
-*/
 /* =========================
-   🌑 MODO OSCURO
+   🔙 BOTÓN VOLVER
 ========================= */
+.back-btn {
+  position: fixed;
+  top: 110px;
+  left: 20px;
+  z-index: 1000;
+}
+
+.back-btn img {
+  width: 70px;
+}
+
+/* =========================
+   🧠 HOME
+========================= */
+.home {
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+
+  background: url('../img/hawkins.png') center/cover no-repeat;
+}
+
 body.dark .home {
   background: url('../img/upside-down.png') center/cover no-repeat;
 }
 
-body.dark .portada img {
-  filter: brightness(0.8);
-}
-
-body.dark .descripcion {
-  color: white;
-}
-
-body.dark .card {
-  background: #0a0a0a;
-}
-
-body.dark .card-frame {
-  background: #1a1a1a;
-  border-color: #ff0000;
-}
-
-body.dark .card-image img {
-  filter: brightness(0.7) hue-rotate(30deg);
-}
-
-/* =========================
-   🧠 HOME / PORTADA
-========================= */
-.home {
-  text-align: center;
-  padding: 10px 20px;
-  min-height: 100vh;
-  background: url('../img/hawkins.png') center/cover no-repeat;
-}
-
+/* portada */
 .portada {
   max-width: 800px;
-  margin: 10px auto 30px;
+  margin: 20px auto;
 }
 
 .portada img {
-  width: 580px;
-  margin-bottom: 5px;
-}
-
-.title {
-  font-size: 48px;
-  font-family: 'Orbitron', sans-serif;
-  color: #a80000;
-  margin-bottom: 20px;
+  width: 100%;
+  max-width: 580px;
 }
 
 .descripcion {
-  font-size: 24px;
+  font-size: 22px;
   color: white;
-  line-height: 1.6;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 3px black;
 }
 
+/* about */
 .about {
-  font-size: 24px;
+  max-width: 900px;
+  margin: 30px auto;
+  font-size: 18px;
   color: white;
   line-height: 1.6;
   text-shadow: 1px 1px 2px black;
+  text-align: justify;
 }
 
 /* =========================
-   🔄 PAGINAS SPA
+   🟥 CARDS
 ========================= */
-.hidden {
-  display: none;
-}
-
-/* =========================
-   📖 BITÁCORA
-========================= */
-.bitacora-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.bitacora-content p {
-  color: #666;
-}
-
-.bitacora-entry {
-  border-left: 4px solid #a80000;
-  padding-left: 20px;
-  margin-bottom: 30px;
-}
-
-.bitacora-entry h3 {
-  color: #a80000;
-  font-family: 'Orbitron', sans-serif;
-  margin-bottom: 10px;
-}
-
-.bitacora-entry p {
-  color: #333;
-  line-height: 1.6;
-}
-
-body.dark .bitacora-entry h3 {
-  color: #ff4444;
-}
-
-body.dark .bitacora-entry p {
-  color: #ccc;
-}
-
-/* Grid */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -344,75 +216,23 @@ body.dark .bitacora-entry p {
   margin: 0 auto;
 }
 
-/*
-.card {
-  background: #a80000;
-  border-radius: 12px;
-  padding: 12px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: inset 0 0 0 5px white;
-}
-
-.card h2 {
-  color: white;
-  font-size: 18px;
-  margin-top: 8px;
-}
-
-.card p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 14px;
-  margin: 4px 0;
-}
-
-.card button {
-  margin-top: 10px;
-  background: #CA0606;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 600;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 8px;
-}
-*/
-
-/* =========================
-   🟥 CARD BASE
-========================= */
 .card {
   background: #7a0000;
   padding: 10px;
   cursor: pointer;
 }
 
-/* =========================
-   🟥 MARCO INTERNO
-========================= */
 .card-frame {
   background: #a80000;
   border: 4px solid white;
   padding: 20px;
   text-align: center;
-  position: relative;
 }
 
 .card-image img {
   width: 100%;
-  display: block;
 }
 
-/* =========================
-   🧠 TEXTO
-========================= */
 .card-frame h2 {
   color: white;
   margin: 10px 0;
@@ -421,33 +241,26 @@ body.dark .bitacora-entry p {
 
 .card-frame p {
   color: white;
-  margin-bottom: 20px;
 }
 
-/* =========================
-   🔴 BOTÓN (clave del efecto)
-========================= */
 .card-frame button {
+  margin-top: 10px;
   background: #ff0000;
-  color: white;
   border: none;
-  padding: 12px 20px;
-  font-size: 16px;
+  padding: 10px;
+  color: white;
   cursor: pointer;
 
-  /* efecto elevación */
-  box-shadow: 0 6px 0 #990000;
-  transition: all 0.1s ease;
+  box-shadow: 0 5px 0 #990000;
 }
 
-/* efecto al presionar */
 .card-frame button:active {
-  transform: translateY(4px);
+  transform: translateY(3px);
   box-shadow: 0 2px 0 #990000;
 }
 
 /* =========================
-   🧠 PERFIL BASE
+   👤 PROFILE
 ========================= */
 .profile {
   min-height: 100vh;
@@ -464,9 +277,6 @@ body.dark .profile {
   background: url('../img/background_max_profile_dark.png') center/cover no-repeat;
 }
 
-/* =========================
-   🟥 CARD
-========================= */
 .profile-card {
   display: flex;
   gap: 30px;
@@ -477,83 +287,152 @@ body.dark .profile {
   width: 900px;
   max-width: 95%;
 
-  position: relative;
-
-  background-size: cover;
-  background-position: center;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(6px);
 
   color: white;
 }
 
-/* =========================
-   🖼️ IMAGEN
-========================= */
 .profile-card img {
-  width: 300px;
-  border-radius: 10px;
+  width: 280px;
 }
 
-/* =========================
-   📄 TEXTO
-========================= */
 .profile-info {
   max-width: 450px;
-}
-
-.profile-info h2 {
-  margin-bottom: 10px;
 }
 
 .quote {
   font-style: italic;
   opacity: 0.8;
-  margin-bottom: 15px;
 }
 
 /* =========================
-   🔘 BOTÓN DIMENSIÓN
+   📖 BITÁCORA
 ========================= */
-/*
-.dimension-btn {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+.bitacora {
+  min-height: 100vh;
+  padding: 40px 20px;
 
-  padding: 12px 20px;
-  border: none;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  background: black;
+/* TÍTULO */
+.bitacora .title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  color: #b30000;
+  margin-bottom: 10px;
+}
+
+.bitacora .subtitle {
+  font-size: 24px;
   color: white;
-  border-radius: 20px;
+  text-shadow: 1px 1px 3px black;
+  margin-bottom: 40px;
 }
-  */
 
-/* =========================
-   🔙 BOTÓN VOLVER
-========================= */
+/* CAJA CENTRAL */
+.bitacora-content {
+  width: 90%;
+  max-width: 900px;
 
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+
+  padding: 40px 30px;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* ENTRADAS */
+.bitacora-entry {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+}
+
+/* LINEA ROJA */
+.bitacora-entry::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+
+  width: 5px;
+  height: 80%;
+
+  background: #b30000;
+  border-radius: 3px;
+}
+
+/* TITULO DE DIA */
+.bitacora-entry h3 {
+  font-family: 'Orbitron', sans-serif;
+  color: #b30000;
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+
+/* TEXTO */
+.bitacora-entry p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 18px;
+}
 
 /* =========================
    📞 FOOTER
 ========================= */
 .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 40px;
-  background: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.85);
 }
 
 .footer p {
   color: white;
-  font-size: 14px;
 }
 
 /* =========================
    📱 RESPONSIVE
 ========================= */
-@media (max-width: 768px) {
+
+/* =========================
+   💻 1200px Pantallas de escritorio
+========================= */
+@media (max-width: 1200px) {
+
+  .logo-img {
+    height: 60px;
+  }
+
+  .grid {
+    gap: 25px;
+  }
+
+  .card {
+    max-width: 220px;
+  }
+
+  .profile-card {
+    width: 95%;
+  }
+
+  .back-btn {
+    top: 100px;
+  }
+}
+
+
+/* =========================
+   📱 900px Tablets o pantallas medianas
+========================= */
+@media (max-width: 900px) {
+
+  /* NAV MOBILE */
   .menu-toggle {
     display: flex;
   }
@@ -561,10 +440,10 @@ body.dark .profile {
   .nav {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 80px;
     left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    background: rgba(0,0,0,0.95);
     flex-direction: column;
     padding: 20px;
     gap: 15px;
@@ -574,27 +453,134 @@ body.dark .profile {
     display: flex;
   }
 
-  .logo-img {
-    height: 40px;
-  }
-}
-
-@media (max-width: 900px) {
+  /* GRID */
   .grid {
     gap: 20px;
   }
 
   .card {
-    width: 220px;
+    max-width: 200px;
+  }
+
+  /* PORTADA */
+  .portada img {
+    max-width: 450px;
+  }
+
+  .descripcion {
+    font-size: 20px;
+  }
+
+  /* PROFILE */
+  .profile-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-card img {
+    width: 200px;
+  }
+
+  .profile-info {
+    max-width: 100%;
+  }
+
+  /* BITÁCORA */
+   .bitacora .title {
+    font-size: 36px;
+  }
+
+  .bitacora .subtitle {
+    font-size: 20px;
+  }
+
+  .bitacora-content {
+    padding: 30px 20px;
+  }
+
+  .bitacora-entry p {
+    font-size: 16px;
+  }
+
+  /* BOTON VOLVER */
+  .back-btn {
+    top: 90px;
   }
 }
 
+
+/* =========================
+   📱 400px Dispositivos moviles pequeños
+========================= */
 @media (max-width: 400px) {
+
+  /* GRID -> UNA COLUMNA */
   .grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: center;
   }
 
   .card {
     width: 90%;
+    max-width: 300px;
+  }
+
+  /* PORTADA */
+  .portada img {
+    max-width: 280px;
+  }
+
+  .descripcion {
+    font-size: 16px;
+  }
+
+  .about {
+    font-size: 15px;
+    padding: 0 10px;
+  }
+
+  /* PROFILE */
+  .profile-card {
+    padding: 15px;
+  }
+
+  .profile-card img {
+    width: 150px;
+  }
+
+  .profile-info h2 {
+    font-size: 18px;
+  }
+
+  .profile-info p {
+    font-size: 13px;
+  }
+
+  /* BITÁCORA */
+   .bitacora .title {
+    font-size: 28px;
+  }
+
+  .bitacora .subtitle {
+    font-size: 16px;
+  }
+
+  .bitacora-entry h3 {
+    font-size: 18px;
+  }
+
+  .bitacora-entry p {
+    font-size: 14px;
+  }
+
+  /* BOTON VOLVER */
+  .back-btn {
+    top: 80px;
+    left: 10px;
+  }
+
+  .back-btn img {
+    width: 55px;
   }
 }
