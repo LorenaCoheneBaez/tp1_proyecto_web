@@ -7,12 +7,17 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'StrangerThings';
+  src: url('./font/Bolton.ttf') format('truetype');
+}
+
 /* =========================
    🧠 BODY
 ========================= */
 body {
   font-family: 'Inter', sans-serif;
-  background: #d6dee4;
+  background: #0d0d0e;
   transition: background 0.5s ease, filter 0.5s ease;
 }
 
@@ -90,6 +95,18 @@ body.dark #loader {
 
 .logo-img {
   height: 80px;
+} 
+
+.title {
+  font-family: 'StrangerThings', serif;
+  color: #e50914;
+  font-size: 50px;
+  margin: 50px;
+  text-shadow: 
+    0 0 15px #ff0000,
+    0 0 20px #ff0000,
+    0 0 30px #ff0000;
+  letter-spacing: 3px;
 }
 
 /* =========================
@@ -211,53 +228,165 @@ body.dark .home {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 50px;
+  padding: 80px 0;
 }
 
+/* CARD */
 .card {
-  background: #7a0000;
-  padding: 10px;
+  position: relative;
+  width: 240px;
+  height: 340px;
   cursor: pointer;
+  transition: 0.4s;
+  isolation: isolate;
 }
 
+/* BORDE GLOW */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border: 2px solid rgba(255, 0, 0, 0.4);
+  filter: blur(6px);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* NIEBLA */
+.card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(255,0,0,0.2), transparent 70%);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* CONTENIDO */
 .card-frame {
-  background: #a80000;
-  border: 4px solid white;
+  position: relative;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  border: 1px solid rgba(255,0,0,0.3);
   padding: 20px;
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* IMAGEN */
 .card-image img {
   width: 100%;
+  transition: 0.4s;
 }
 
+/* TEXTO */
 .card-frame h2 {
-  color: white;
-  margin: 10px 0;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'StrangerThings', serif;
+  color: #ff2a2a;
+  text-shadow: 0 0 10px red;
+  letter-spacing: 2px;
 }
 
 .card-frame p {
-  color: white;
+  color: #ccc;
 }
 
+/* BOTÓN */
 .card-frame button {
-  margin-top: 10px;
-  background: #ff0000;
-  border: none;
-  padding: 10px;
-  color: white;
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+  padding: 8px;
   cursor: pointer;
-
-  box-shadow: 0 5px 0 #990000;
+  transition: 0.3s;
 }
 
-.card-frame button:active {
-  transform: translateY(3px);
-  box-shadow: 0 2px 0 #990000;
+.card-frame button:hover {
+  background: red;
+  color: black;
+  box-shadow: 0 0 10px red;
 }
+
+/* =========================
+   👹 HOVER EFECTO
+========================= */
+.card:hover::before {
+  opacity: 1;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1);
+  filter: grayscale(100%) contrast(140%) brightness(0.7);
+}
+
+.card:hover h2 {
+  text-shadow: 
+    0 0 10px red,
+    0 0 20px red,
+    0 0 40px red;
+}
+
+.card:hover {
+  transform: scale(1.07) rotateX(4deg);
+  box-shadow: 
+    0 0 20px red,
+    0 0 40px red,
+    0 0 80px rgba(255,0,0,0.6);
+}
+
+.card:hover::before {
+  opacity: 1;
+  animation: borderFlicker 1.5s infinite;
+}
+
+.card:hover::after {
+  opacity: 1;
+  background: radial-gradient(circle, rgba(255,0,0,0.35), transparent 70%);
+}
+
+.card:hover .card-image img {
+  transform: scale(1.15);
+  filter: grayscale(100%) contrast(160%) brightness(0.6);
+}
+
+.card:hover h2 {
+  animation: textFlicker 1.5s infinite;
+}
+
+/* =========================
+   ⚡ ANIMACIONES
+========================= */
+
+@keyframes borderFlicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.3;
+  }
+}
+
+@keyframes textFlicker {
+  0%, 100% {
+    text-shadow: 0 0 10px red, 0 0 20px red;
+  }
+  50% {
+    text-shadow: 0 0 5px red, 0 0 40px red;
+  }
+}
+
 
 /* =========================
    👤 PROFILE
@@ -267,34 +396,50 @@ body.dark .home {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-body.light .profile {
-  background: url('../img/background_max_profile_light.png') center/cover no-repeat;
-}
-
-body.dark .profile {
-  background: url('../img/background_max_profile_dark.png') center/cover no-repeat;
+.profile::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border: 1px solid red;
+  opacity: 0.3;
+  filter: blur(6px);
+  background: radial-gradient(circle, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+  z-index: 0;
 }
 
 .profile-card {
+  position: relative;
+  z-index: 1;
+
   display: flex;
   gap: 30px;
 
-  padding: 30px;
+  padding: 40px;
   border-radius: 20px;
 
   width: 900px;
   max-width: 95%;
 
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,0,0,0.3);
+
+  box-shadow: 
+  0 0 20px rgba(255,0,0,0.3),
+  0 0 60px rgba(255,0,0,0.2);
 
   color: white;
 }
 
-.profile-card img {
-  width: 280px;
+#profile-name{
+  font-family: 'StrangerThings', serif;
+  color: #ff2a2a;
+  text-shadow: 0 0 10px red;
+  letter-spacing: 2px;
 }
 
 .profile-info {
@@ -305,6 +450,75 @@ body.dark .profile {
   font-style: italic;
   opacity: 0.8;
 }
+
+.profile-card img {
+  width: 280px;
+  filter: contrast(120%) brightness(0.9);
+  transition: 0.4s;
+  height: auto;
+}
+
+.profile-card img:hover {
+  filter: grayscale(100%) contrast(150%) brightness(0.6);
+  transform: scale(1.05);
+}
+
+.profile-card {
+  animation: flicker 3s infinite;
+}
+
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.97; }
+  52% { opacity: 0.9; }
+  54% { opacity: 1; }
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================
+   👤 PROFILE MAX
+========================= */
+
+body.light .profile {
+  background: url('../img/background_max_profile_light.png') center/cover no-repeat;
+}
+/* 
+body.dark .profile {
+  background: url('../img/background_max_profile_dark.png') center/cover no-repeat;
+} */
+
+body.dark .profile {
+  background: url('../img/fondo_max3.jpg') center/cover no-repeat;
+}
+
+.profile-card img {
+  width: 280px;
+}
+
+
+/* =========================
+   👤 PROFILE NANCY
+========================= */
+
+
+
+/* =========================
+   👤 PROFILE STEVE
+========================= */
+
+
+
+/* =========================
+   👤 PROFILE ROBIN
+========================= */
+
+
+
 
 /* =========================
    📖 BITÁCORA
@@ -397,6 +611,22 @@ body.dark .profile {
 }
 
 /* =========================
+   🚫 OCULTAR CONTENIDO DURANTE LOADING
+========================= */
+body.loading main,
+body.loading header,
+body.loading footer {
+  display: none;
+  visibility: hidden;
+}
+
+/* transición suave cuando aparece */
+main, header, footer {
+  transition: opacity 0.6s ease;
+}
+
+
+/* =========================
    📱 RESPONSIVE
 ========================= */
 
@@ -425,7 +655,6 @@ body.dark .profile {
     top: 100px;
   }
 }
-
 
 /* =========================
    📱 900px Tablets o pantallas medianas
@@ -507,7 +736,13 @@ body.dark .profile {
   .back-btn {
     top: 90px;
   }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
 }
+
 
 
 /* =========================
@@ -584,3 +819,4 @@ body.dark .profile {
     width: 55px;
   }
 }
+

@@ -6,12 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loader");
   const loaderDark = document.getElementById("loader-dark");
 
-  if (isDark && loader && loaderDark) {
+  if (loader && loaderDark) {
     loader.style.display = "none";
-    loaderDark.style.display = "flex";
-  } else if (loader && loaderDark) {
-    loader.style.display = "flex";
     loaderDark.style.display = "none";
+
+    if (isDark) {
+      loaderDark.style.display = "flex";
+    } else {
+      loader.style.display = "flex";
+    }
   }
 
   const activeLoader = isDark ? loaderDark : loader;
@@ -19,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setTimeout(() => {
     if (activeLoader) {
       activeLoader.style.opacity = "0";
+
       setTimeout(() => {
         activeLoader.style.display = "none";
         document.body.classList.remove("loading");
@@ -29,7 +33,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }, 2000);
 
   applyTheme();
-
 });
 
 function applyTheme() {
@@ -90,8 +93,8 @@ if (themeToggle && themeIcon) {
 
     const cardImages = document.querySelectorAll('.card-image img');
     if (cardImages.length > 0) {
-      const light = ['img/max_light.png', 'img/nancy_light.png', 'img/steve_light.png'];
-      const dark = ['img/max_dark.png', 'img/nancy_dark.png', 'img/steve_dark.png'];
+      const light = ['img/max_light.png', 'img/nancy_light.png', 'img/steve_light.png', 'img/robin_light.png'];
+      const dark = ['img/max_dark.png', 'img/nancy_dark.png', 'img/steve_dark.png', 'img/robin_dark.png'];
       const imgs = isDark ? dark : light;
       cardImages.forEach((img, index) => {
         img.src = imgs[index] || img.src;
