@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hawkins Devs | Bitácora</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="loading dark">
+
+  <div id="loader" class="loader light" style="display: none;">
+    <div class="loader-box loader-box-light">
+      <h2>¡Bienvenidos!</h2>
+      <p>Estas entrando al portafolio</p>
+    </div>
+    <img src="img/welcome_home.png" class="bikes" alt="bicletas">
+  </div>
+
+  <div id="loader-dark" class="loader dark">
+    <div class="loader-box loader-box-dark">
+      <h2>Bienvenido al Infierno...</h2>
+      <p>Has cruzado al Upside Down</p>
+    </div>
+    <img src="img/welcome_hell.png" class="bikes" alt="silueta">
+  </div>
+
+  <header class="header">
+    <img src="img/logo_devs.png" alt="Logo" class="logo-img">
+    <button class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="bitacora.html" class="nav-link">Bitácora</a>
+      <button id="theme-toggle" class="theme-btn">
+        <img id="theme-icon" src="img/btn_down.png" alt="Modo Oscuro">
+      </button>
+    </nav>
+  </header>
+
+  <main class="home">
+    <a href="index.html" class="back-btn">
+      <img src="img/btn_back_dark.png" alt="Volver">
+    </a>
+
+    <section class="bitacora">
+      <div class="portada">
+        <h2 class="title">Bitácora</h2>
+        <p class="subtitle">Documentación del proceso de desarrollo del proyecto.</p>
+      </div>
+
+      <div class="bitacora-content">
+        <div class="bitacora-entry">
+          <h3>Día 1 - Inicio del proyecto</h3>
+          <p>Se creó la estructura base del portafolio con HTML, CSS y JS. Se configuró el loader con imágenes de
+            Stranger Things.</p>
+        </div>
+
+        <div class="bitacora-entry">
+          <h3>Día 2 - Diseño del Home</h3>
+          <p>Se agregó el diseño de las cards de integrantes con marco blanco y efectos de elevación en los botones.</p>
+        </div>
+
+        <div class="bitacora-entry">
+          <h3>Día 3 - Modo Oscuro</h3>
+          <p>Se implementó la funcionalidad del modo oscuro con el fondo upside-down.png y cambio de imágenes de
+            integrantes.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Comisión X - 2026</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
