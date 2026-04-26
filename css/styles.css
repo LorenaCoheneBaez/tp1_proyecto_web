@@ -58,12 +58,12 @@ body.dark #loader {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   padding: 120px 200px;
   border-radius: 15px;
   text-align: center;
   z-index: 1;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .loader-box h2 {
@@ -89,20 +89,20 @@ body.dark #loader {
   align-items: center;
 
   padding: 15px 40px;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
   min-height: 80px;
 }
 
 .logo-img {
   height: 80px;
-} 
+}
 
 .title {
   font-family: 'StrangerThings', serif;
   color: #e50914;
   font-size: 50px;
   margin: 50px;
-  text-shadow: 
+  text-shadow:
     0 0 15px #ff0000,
     0 0 20px #ff0000,
     0 0 30px #ff0000;
@@ -204,10 +204,18 @@ body.dark .home {
   max-width: 580px;
 }
 
-.descripcion {
+body.light .descripcion {
   font-size: 22px;
-  color: white;
+  color: black;
   text-shadow: 1px 1px 3px black;
+  font-family: "Bolton";
+}
+
+body.dark .descripcion {
+  font-size: 22px;
+  color: #fff;
+  text-shadow: 1px 1px 3px #fff;
+  font-family: "Bolton";
 }
 
 /* about */
@@ -219,6 +227,22 @@ body.dark .home {
   line-height: 1.6;
   text-shadow: 1px 1px 2px black;
   text-align: justify;
+}
+
+.box-about-description {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: .625rem;
+  border-radius: .3125rem;
+}
+
+body.light .about-description {
+  color: #000;
+}
+
+body.dark .about-description {
+  color: #fff;
 }
 
 /* =========================
@@ -243,9 +267,15 @@ body.dark .home {
 }
 
 /* BORDE GLOW */
+.card::before,
+.card::after {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .card::before {
   content: "";
-  position: absolute;
   inset: -3px;
   border: 2px solid rgba(255, 0, 0, 0.4);
   filter: blur(6px);
@@ -256,9 +286,8 @@ body.dark .home {
 /* NIEBLA */
 .card::after {
   content: "";
-  position: absolute;
   inset: 0;
-  background: radial-gradient(circle, rgba(255,0,0,0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.2), transparent 70%);
   opacity: 0;
   transition: 0.4s;
 }
@@ -267,11 +296,10 @@ body.dark .home {
 .card-frame {
   position: relative;
   height: 100%;
-  background: rgba(0,0,0,0.9);
-  border: 1px solid rgba(255,0,0,0.3);
+  background: rgba(0, 0, 0, 0.9);
+  border: 1px solid rgba(255, 0, 0, 0.3);
   padding: 20px;
   text-align: center;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -296,16 +324,17 @@ body.dark .home {
 }
 
 /* BOTÓN */
-.card-frame button {
+.card-frame a{
   background: transparent;
   border: 1px solid red;
   color: red;
   padding: 8px;
   cursor: pointer;
   transition: 0.3s;
+  text-decoration: none;
 }
 
-.card-frame button:hover {
+.card-frame a:hover {
   background: red;
   color: black;
   box-shadow: 0 0 10px red;
@@ -332,7 +361,7 @@ body.dark .home {
 }
 
 .card:hover h2 {
-  text-shadow: 
+  text-shadow:
     0 0 10px red,
     0 0 20px red,
     0 0 40px red;
@@ -340,10 +369,10 @@ body.dark .home {
 
 .card:hover {
   transform: scale(1.07) rotateX(4deg);
-  box-shadow: 
+  box-shadow:
     0 0 20px red,
     0 0 40px red,
-    0 0 80px rgba(255,0,0,0.6);
+    0 0 80px rgba(255, 0, 0, 0.6);
 }
 
 .card:hover::before {
@@ -353,7 +382,7 @@ body.dark .home {
 
 .card:hover::after {
   opacity: 1;
-  background: radial-gradient(circle, rgba(255,0,0,0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(255, 0, 0, 0.35), transparent 70%);
 }
 
 .card:hover .card-image img {
@@ -370,18 +399,31 @@ body.dark .home {
 ========================= */
 
 @keyframes borderFlicker {
-  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+  0%,
+  18%,
+  22%,
+  25%,
+  53%,
+  57%,
+  100% {
     opacity: 1;
   }
-  20%, 24%, 55% {
+
+  20%,
+  24%,
+  55% {
     opacity: 0.3;
   }
 }
 
 @keyframes textFlicker {
-  0%, 100% {
+
+  0%,
+  100% {
     text-shadow: 0 0 10px red, 0 0 20px red;
   }
+
   50% {
     text-shadow: 0 0 5px red, 0 0 40px red;
   }
@@ -406,7 +448,7 @@ body.dark .home {
   border: 1px solid red;
   opacity: 0.3;
   filter: blur(6px);
-  background: radial-gradient(circle, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
   z-index: 0;
 }
 
@@ -423,19 +465,19 @@ body.dark .home {
   width: 900px;
   max-width: 95%;
 
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(10px);
 
-  border: 1px solid rgba(255,0,0,0.3);
+  border: 1px solid rgba(255, 0, 0, 0.3);
 
-  box-shadow: 
-  0 0 20px rgba(255,0,0,0.3),
-  0 0 60px rgba(255,0,0,0.2);
+  box-shadow:
+    0 0 20px rgba(255, 0, 0, 0.3),
+    0 0 60px rgba(255, 0, 0, 0.2);
 
   color: white;
 }
 
-#profile-name{
+#profile-name {
   font-family: 'StrangerThings', serif;
   color: #ff2a2a;
   text-shadow: 0 0 10px red;
@@ -468,10 +510,23 @@ body.dark .home {
 }
 
 @keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.97; }
-  52% { opacity: 0.9; }
-  54% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.97;
+  }
+
+  52% {
+    opacity: 0.9;
+  }
+
+  54% {
+    opacity: 1;
+  }
 }
 
 .profile-info {
@@ -487,6 +542,7 @@ body.dark .home {
 body.light .profile {
   background: url('../img/background_max_profile_light.png') center/cover no-repeat;
 }
+
 /* 
 body.dark .profile {
   background: url('../img/background_max_profile_dark.png') center/cover no-repeat;
@@ -526,7 +582,6 @@ body.dark .profile {
 .bitacora {
   min-height: 100vh;
   padding: 40px 20px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -534,14 +589,29 @@ body.dark .profile {
 }
 
 /* TÍTULO */
-.bitacora .title {
+body.light .bitacora .title {
   font-family: 'Orbitron', sans-serif;
   font-size: 48px;
   color: #b30000;
   margin-bottom: 10px;
 }
 
-.bitacora .subtitle {
+body.dark .bitacora .title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  color: #b30000;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.398);
+}
+
+body.light .bitacora .subtitle {
+  font-size: 24px;
+  color: #000;
+  text-shadow: 1px 1px 3px white;
+  margin-bottom: 40px;
+}
+
+body.dark .bitacora .subtitle {
   font-size: 24px;
   color: white;
   text-shadow: 1px 1px 3px black;
@@ -558,7 +628,7 @@ body.dark .profile {
 
   padding: 40px 30px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 /* ENTRADAS */
@@ -603,7 +673,7 @@ body.dark .profile {
 .footer {
   text-align: center;
   padding: 20px;
-  background: rgba(0,0,0,0.85);
+  background: rgba(0, 0, 0, 0.85);
 }
 
 .footer p {
@@ -621,7 +691,9 @@ body.loading footer {
 }
 
 /* transición suave cuando aparece */
-main, header, footer {
+main,
+header,
+footer {
   transition: opacity 0.6s ease;
 }
 
@@ -672,7 +744,7 @@ main, header, footer {
     top: 80px;
     left: 0;
     width: 100%;
-    background: rgba(0,0,0,0.95);
+    background: rgba(0, 0, 0, 0.95);
     flex-direction: column;
     padding: 20px;
     gap: 15px;
@@ -716,7 +788,7 @@ main, header, footer {
   }
 
   /* BITÁCORA */
-   .bitacora .title {
+  .bitacora .title {
     font-size: 36px;
   }
 
@@ -793,7 +865,7 @@ main, header, footer {
   }
 
   /* BITÁCORA */
-   .bitacora .title {
+  .bitacora .title {
     font-size: 28px;
   }
 
@@ -819,4 +891,3 @@ main, header, footer {
     width: 55px;
   }
 }
-
