@@ -137,29 +137,3 @@ if (skills) {
       : "<strong>Habilidades:</strong><br>Pensamiento creativo<br>Atención al detalle visual<br>Adaptabilidad";
   }
 }
-
-document.querySelectorAll('.card[data-link]').forEach(card => {
-  card.style.cursor = 'pointer';
-  card.addEventListener('click', () => {
-    window.location.href = card.dataset.link;
-  });
-});
-
-document.querySelectorAll('.card button').forEach(btn => {
-  btn.addEventListener('click', (e) => {
-    const card = e.target.closest('.card');
-    const link = card?.dataset.link;
-    if (link) {
-      window.location.href = link;
-    }
-  });
-});
-
-const menuToggle = document.getElementById('menu-toggle');
-const nav = document.getElementById('nav');
-
-if (menuToggle && nav) {
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('active');
-  });
-}
