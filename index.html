@@ -1,26 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hawkins Devs</title>
+  <link rel="icon" href="img/logo_portafolio.png" type="image/x-icon" />
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap"
-    rel="stylesheet">
+    rel="stylesheet" />
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 
 <body class="loading light">
-
   <!-- =========================
        ⏳ LOADER (modo claro)
   ========================== -->
   <div id="loader" class="loader light">
-
     <!-- Caja clara -->
     <div class="loader-box loader-box-light">
       <h2>¡Bienvenidos!</h2>
@@ -28,15 +27,13 @@
     </div>
 
     <!-- Silueta bicicletas -->
-    <img src="img/welcome_home.png" class="bikes" alt="bicletas">
-
+    <img src="img/welcome_home.png" class="bikes" alt="bicletas" />
   </div>
 
   <!-- =========================
        ⏳ LOADER (modo oscuro)
   ========================== -->
-  <div id="loader-dark" class="loader dark" style="display: none;">
-
+  <div id="loader-dark" class="loader dark" style="display: none">
     <!-- Caja oscura -->
     <div class="loader-box loader-box-dark">
       <h2>Bienvenido al Infierno...</h2>
@@ -44,15 +41,14 @@
     </div>
 
     <!-- Silueta -->
-    <img src="img/welcome_hell.png" class="bikes" alt="silueta">
-
+    <img src="img/welcome_hell.png" class="bikes" alt="silueta" />
   </div>
 
   <!-- =========================
        🧭 HEADER / NAV
   ========================== -->
   <header class="header">
-    <img src="img/logo_devs.png" alt="Logo" class="logo-img">
+    <img src="img/logo_devs.png" alt="Logo" class="logo-img" />
     <button class="menu-toggle" id="menu-toggle">
       <span></span>
       <span></span>
@@ -62,7 +58,7 @@
       <a href="index.html" class="nav-link active">Home</a>
       <a href="bitacora.html" class="nav-link">Bitácora</a>
       <button id="theme-toggle" class="theme-btn">
-        <img id="theme-icon" src="img/btn_down.png" alt="Modo Oscuro">
+        <img id="theme-icon" src="img/btn_down.png" alt="Modo Oscuro" />
       </button>
     </nav>
   </header>
@@ -71,90 +67,98 @@
        🧠 CONTENIDO PRINCIPAL
   ========================== -->
   <main class="home">
-
     <!-- HOME -->
     <section class="page-home" id="page-home">
       <div class="portada">
-        <h1 class="title">Strange Portafolio</h1>
-        <p class="descripcion">Bienvenidos a nuestro pueblo.</p>
-        <p class="descripcion">Descubre las habilidades de nuestros expertos.</p>
+        <h1 class="title">
+          <img src="img/logo_portafolio.png" alt="Strange Portafolio" />
+        </h1>
+        <h2 class="descripcion">Bienvenidos a nuestro pueblo.</>
+          <h2 class="descripcion">
+            Descubre las habilidades de nuestros expertos.
+            </>
       </div>
 
       <section class="about">
-        <h2>Sobre Nosotros</h2>
+        <h2 class="descripcion">Sobre Nosotros</h2>
+        <div class="box-about-description">
+          <p class="about-description">
+            Somos un equipo de cinco desarrolladores en formación que decidieron
+            unir sus habilidades para construir algo más que una simple página
+            web. Este proyecto representa nuestro primer trabajo conjunto como
+            equipo, donde cada integrante aporta su propia visión, estilo y
+            forma de entender el desarrollo.
+          </p>
 
-        <p>
-          Somos un equipo de cinco desarrolladores en formación que decidieron unir sus habilidades
-          para construir algo más que una simple página web. Este proyecto representa nuestro primer
-          trabajo conjunto como equipo, donde cada integrante aporta su propia visión, estilo y forma
-          de entender el desarrollo.
-        </p>
+          <p class="about-description">
+            Inspirados en la dualidad entre lo cotidiano y lo desconocido,
+            diseñamos una experiencia que refleja dos mundos: uno visible,
+            ordenado y familiar… y otro oculto, oscuro e impredecible. Así como
+            en Hawkins, detrás de cada interfaz existe una capa más profunda
+            donde la creatividad, la lógica y la experimentación se entrelazan.
+          </p>
 
-        <p>
-          Inspirados en la dualidad entre lo cotidiano y lo desconocido, diseñamos una experiencia que
-          refleja dos mundos: uno visible, ordenado y familiar… y otro oculto, oscuro e impredecible.
-          Así como en Hawkins, detrás de cada interfaz existe una capa más profunda donde la creatividad,
-          la lógica y la experimentación se entrelazan.
-        </p>
+          <p class="about-description">
+            Nuestro objetivo es crear una plataforma que no solo muestre quiénes
+            somos, sino también cómo pensamos, cómo construimos y cómo
+            transformamos ideas en experiencias digitales. Cada perfil, cada
+            interacción y cada detalle está pensado como parte de este universo
+            que estamos desarrollando.
+          </p>
+        </div>
 
-        <p>
-          Nuestro objetivo es crear una plataforma que no solo muestre quiénes somos, sino también cómo
-          pensamos, cómo construimos y cómo transformamos ideas en experiencias digitales. Cada perfil,
-          cada interacción y cada detalle está pensado como parte de este universo que estamos desarrollando.
-        </p>
       </section>
 
       <section class="grid">
-
-        <div class="card" data-link="integrante1.html">
+        <div class="card" >
           <div class="card-frame">
             <div class="card-image">
-              <img src="img/max_light.png" alt="Max">
+              <img src="img/max_light.png" alt="Max" />
             </div>
 
             <h2>Max</h2>
             <p>Front-end Developer</p>
 
-            <button>Ver Perfil</button>
+            <a href="bitacora.html">Ver Perfil</a>
           </div>
         </div>
 
         <div class="card">
           <div class="card-frame">
             <div class="card-image">
-              <img src="img/nancy_light.png" alt="Nancy">
+              <img src="img/nancy_light.png" alt="Nancy" />
             </div>
 
-            <h2>Nancy</h2>
+            <h2>Lorena</h2>
             <p>Back-end Developer</p>
 
-            <button>Ver Perfil</button>
+            <a href="lorena.html">Ver Perfil</a>
           </div>
         </div>
 
         <div class="card">
           <div class="card-frame">
             <div class="card-image">
-              <img src="img/steve_light.png" alt="Steve">
+              <img src="img/steve_light.png" alt="Steve" />
             </div>
 
             <h2>Steve</h2>
             <p>QA Tester</p>
 
-            <button>Ver Perfil</button>
+            <a href="bitacora.html">Ver Perfil</a>
           </div>
         </div>
 
         <div class="card">
           <div class="card-frame">
             <div class="card-image">
-              <img src="img/robin_light.png" alt="Robin">
+              <img src="img/robin_light.png" alt="Robin" />
             </div>
 
             <h2>Robin</h2>
             <p>Data Analyst</p>
 
-            <button>Ver Perfil</button>
+            <a href="bitacora.html">Ver Perfil</a>
           </div>
         </div>
       </section>
@@ -170,6 +174,6 @@
 
   <!-- JS (lo agregamos después) -->
   <script src="js/script.js"></script>
-
 </body>
+
 </html>
