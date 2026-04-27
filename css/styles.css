@@ -76,7 +76,6 @@ body.dark #loader {
   position: absolute;
   bottom: 30%;
   width: 220px;
-
   z-index: 2;
 }
 
@@ -468,7 +467,7 @@ body.dark .about-description {
 .profile-card {
   position: relative;
   z-index: 1;
-
+  align-items: center;
   display: flex;
   gap: 30px;
 
@@ -506,11 +505,57 @@ body.dark .about-description {
   opacity: 0.8;
 }
 
-.profile-card img {
-  width: 280px;
-  filter: contrast(120%) brightness(0.9);
-  transition: 0.4s;
-  height: auto;
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.profile-left img {
+  width: 260px;
+  border-radius: 12px;
+  border: 2px solid rgba(255,0,0,0.4);
+  box-shadow: 0 0 15px rgba(255,0,0,0.3);
+}
+
+.profile-left .quote {
+  font-style: italic;
+  font-size: 14px;
+  text-align: center;
+  max-width: 240px;
+  color: #ccc;
+  border-top: 1px solid rgba(255,0,0,0.3);
+  padding-top: 10px;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-data {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.profile-block {
+  border-left: 3px solid red;
+  padding-left: 15px;
+}
+
+.profile-block h3 {
+  color: #ff2a2a;
+  margin-bottom: 5px;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.profile-block p {
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 .profile-card img:hover {
@@ -523,23 +568,10 @@ body.dark .about-description {
 }
 
 @keyframes flicker {
-
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0.97;
-  }
-
-  52% {
-    opacity: 0.9;
-  }
-
-  54% {
-    opacity: 1;
-  }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.97; }
+  52% { opacity: 0.9; }
+  54% { opacity: 1; }
 }
 
 .profile-info {
@@ -549,43 +581,28 @@ body.dark .about-description {
 }
 
 /* =========================
-   👤 PROFILE MAX
+   👤 FONDOS
 ========================= */
 
-body.light .profile {
+body.max.light .profile {
   background: url('../img/background_max_profile_light.png') center/cover no-repeat;
 }
 
-/* 
-body.dark .profile {
-  background: url('../img/background_max_profile_dark.png') center/cover no-repeat;
-} */
-
-body.dark .profile {
+body.max.dark .profile {
   background: url('../img/fondo_max3.jpg') center/cover no-repeat;
 }
 
-.profile-card img {
-  width: 280px;
+/* AGREGAR NANCY */
+
+body.steve.light .profile {
+  background: url('../img/background_stevee_profile_light.jpg') center/cover no-repeat;
 }
 
+body.steve.dark .profile {
+  background: url('../img/background_stevee_profile_dark.jpg') center/cover no-repeat;
+}
 
-/* =========================
-   👤 PROFILE NANCY
-========================= */
-
-
-
-/* =========================
-   👤 PROFILE STEVE
-========================= */
-
-
-
-/* =========================
-   👤 PROFILE ROBIN
-========================= */
-
+/* AGREGAR ROBIN */
 
 
 
@@ -827,8 +844,6 @@ footer {
     gap: 40px;
   }
 }
-
-
 
 /* =========================
    📱 400px Dispositivos moviles pequeños
