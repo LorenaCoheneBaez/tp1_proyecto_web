@@ -483,7 +483,7 @@ body.dark .about-description {
 .profile-card {
   position: relative;
   z-index: 1;
-  align-items: center;
+  align-items: flex-start;
   display: flex;
   gap: 30px;
 
@@ -531,6 +531,7 @@ body.dark .about-description {
 
 .profile-left img {
   width: 260px;
+  margin-top: -20px;
   border-radius: 12px;
   border: 2px solid rgba(255,0,0,0.4);
   box-shadow: 0 0 15px rgba(255,0,0,0.3);
