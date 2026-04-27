@@ -51,12 +51,12 @@ const profiles = {
       dark: '"Puede que no sea perfecto, pero soy el que mantiene todo bajo control"'
     },
     desc: {
-      light: "Carismático y resolutivo, se encarga de que todo funcione como debería.",
-      dark: "Carismático y resiliente, enfrenta fallas ocultas y detecta Demobugs."
+      light: "Carismático y resolutivo, se encarga de que todo funcione como debería. Detecta bugs antes de que lleguen al usuario y asegura la calidad del producto final",
+      dark: "Carismático y resiliente, enfrenta fallas ocultas y detecta Demobugs antes de que emerjan, protegiendo la estabilidad del entorno y evitando que el caos se propague."
     },
     skills: {
-      light: "Observación<br>Trabajo en equipo<br>Reacción rápida<br>Resolución de conflictos",
-      dark: "Instinto de supervivencia<br>Detección de anomalías<br>Trabajo bajo presión"
+      light: "Observación detallada de sistemas y flujos<br>Detección y análisis de vulnerabilidades<br>Reacción rápida ante errores críticos<br>Validación de seguridad y calidad del softwar",
+      dark: "Instinto de supervivencia ante errores críticos<br>Detección de anomalías ocultas<br>Trabajo en equipo bajo presión extrema<br>Reacción inmediata ante amenazas del sistema"
     }
   },
 
