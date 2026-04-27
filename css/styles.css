@@ -352,6 +352,22 @@ body.dark .about-description {
   box-shadow: 0 0 10px red;
 }
 
+.card-frame button {
+  background: transparent;
+  border: 1px solid red;
+  color: red;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-frame button:hover {
+  background: red;
+  color: black;
+  box-shadow: 0 0 10px red;
+}
+
+
 /* =========================
    👹 HOVER EFECTO
 ========================= */
