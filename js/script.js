@@ -165,10 +165,10 @@ function updateProfile(isDark) {
   const desc = document.getElementById("profile-desc");
   const skills = document.getElementById("profile-skills");
 
-  if (role) role.innerHTML = `<strong>Rol:</strong> ${profile.role[mode]}`;
+  if (role) role.innerHTML = `${profile.role[mode]}`;
   if (quote) quote.textContent = profile.quote[mode];
-  if (desc) desc.innerHTML = `<strong>Perfil:</strong> ${profile.desc[mode]}`;
-  if (skills) skills.innerHTML = `<strong>Habilidades:</strong><br>${profile.skills[mode]}`;
+  if (desc) desc.innerHTML = `${profile.desc[mode]}`;
+  if (skills) skills.innerHTML = `${profile.skills[mode]}`;
 }
 
 
