@@ -22,6 +22,8 @@ Breve descripción de la organización de archivos y carpetas del proyecto (por 
 Guia de estilos
 Paleta de Colores: Listado de codigos Hexadecimales (#00000) para fondos, textos y acentos.
 Tipografía: Especificar fuentes de Google Fonts para títulos y cuerpo (con links).
+Fuente Bolton Dafonts: https://www.dafont.com/es/bolton.font
+
 Iconografía: Mencionar librería utilizada (ej: FontAwesome) y confirmar el uso de avatares/IA para privacidad
 
 JavaScript
