@@ -74,12 +74,12 @@ const profiles = {
       dark: '"No quiero morir. No estoy lista"'
     },
     desc: {
-      light: "Creativa, directa y con personalidad fuerte.",
-      dark: "Indomable y desafiante, rompe reglas visuales."
+      light: "Creativa, directa y con personalidad fuerte, transforma ideas en interfaces modernas e intuitivas. Le encanta romper estructuras tradicionales y darle al usuario una experiencia visual única",
+      dark: "Indomable y desafiante, rompe reglas visuales. Moldea interfaces que desafían la lógica y alteran la percepción. Lo visual ya no es solo diseño: es una ilusión controlada donde cada detalle puede atraer… o perder al usuario en la oscuridad"
     },
     skills: {
-      light: "Pensamiento creativo<br>Atención al detalle<br>Adaptabilidad",
-      dark: "Manipulación de interfaces<br>Precisión en caos"
+      light: "Pensamiento creativo<br>Atención al detalle<br>Optimización de interfaces<br>Experiencia de Usuario (UX)",
+      dark: "Manipulación de interfaces en entornos inestables<br>Precisión visual en escenarios caóticos<br>Detección de errores en sistemas corruptos<br>Adaptación a realidades cambiantes"
     }
   },
 
