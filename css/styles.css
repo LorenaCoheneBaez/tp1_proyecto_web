@@ -144,6 +144,7 @@ body.dark .title {
   display: flex;
   align-items: center;
   gap: 30px;
+  z-index: 2000;
 }
 
 .nav-link {
@@ -609,7 +610,13 @@ body.max.dark .profile {
   background: url('../img/background_maax_profile_dark.jpg') center/cover no-repeat;
 }
 
-/* AGREGAR NANCY */
+body.nancy.light .profile {
+  background: url('../img/background_nancy_profile_light.jpg') center/cover no-repeat;
+}
+
+body.nancy.dark .profile {
+  background: url('../img/background_nancy_profile_dark.webp') center/cover no-repeat;
+}
 
 body.steve.light .profile {
   background: url('../img/background_stevee_profile_light.jpg') center/cover no-repeat;

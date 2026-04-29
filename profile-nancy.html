@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hawkins Devs</title>
+    <link rel="icon" href="img/logo_web3.png" type="image/x-icon" />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body class="loading light nancy">
+    <!-- =========================
+       ⏳ LOADER (modo claro)
+  ========================== -->
+    <div id="loader" class="loader light">
+      <div class="loader-box loader-box-light">
+        <h2>¡Bienvenidos!</h2>
+        <p>Estas entrando al portal</p>
+      </div>
+      <img src="img/welcome_home.png" class="bikes" alt="bicletas" />
+    </div>
+
+    <!-- =========================
+       ⏳ LOADER (modo oscuro)
+  ========================== -->
+    <div id="loader-dark" class="loader dark" style="display: none">
+      <div class="loader-box loader-box-dark">
+        <h2>Bienvenido al Infierno...</h2>
+        <p>Has cruzado al Upside Down</p>
+      </div>
+      <img src="img/welcome_hell.png" class="bikes" alt="silueta" />
+    </div>
+
+    <!-- =========================
+       🧭 HEADER / NAV
+  ========================== -->
+    <header class="header">
+    <img src="img/logo_devs.png" alt="Logo" class="logo-img" />
+    <button class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav class="nav" id="nav">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="bitacora.html" class="nav-link">Bitácora</a>
+      <button id="theme-toggle" class="theme-btn">
+        <img id="theme-icon" src="img/btn_down.png" alt="Modo Oscuro" />
+      </button>
+    </nav>
+  </header>
+
+    <!-- CONTENEDOR -->
+    <main class="profile">
+      <a href="index.html" class="back-btn">
+        <img src="img/btn_back_dark.png" alt="Volver" />
+      </a>
+
+      <div class="profile-card">
+        <div class="profile-left">
+          <img
+            id="profile-img"
+            data-profile="nancy"
+            src="img/img_card_nancy_profile_light.png"
+            alt="nancy profile picture"
+          />
+
+          <p id="profile-quote" class="quote"></p>
+        </div>
+
+        <div class="profile-info">
+          <h2 id="profile-name">LORENA WHEELER</h2>
+
+          <div class="profile-data">
+            <p><strong>Ubicación:</strong> Gotham City</p>
+            <p><strong>Edad:</strong> 18 años</p>
+            <p id="profile-role"><strong>Rol:</strong></p>
+          </div>
+
+          <div class="profile-block">
+            <h3>Perfil</h3>
+            <p id="profile-desc"></p>
+          </div>
+
+          <div class="profile-block">
+            <h3>Habilidades</h3>
+            <p id="profile-skills"></p>
+          </div>
+
+          <div class="profile-block">
+            <h3>Música Favorita</h3>
+            <p>
+              Keane <br />
+              Adele <br />
+              N´SYNC <br />
+              Los piojos <br />
+            </p>
+          </div>
+
+          <div class="profile-block">
+            <h3>Pelicula Favorita</h3>
+            <p>
+              Batman begins <br />
+              Your name <br />
+              Terminator 2 <br />
+              El origen<br />
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- =========================
+       📞 FOOTER (simple)
+  ========================== -->
+    <footer class="footer">
+      <p>Comisión X - 2026</p>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
