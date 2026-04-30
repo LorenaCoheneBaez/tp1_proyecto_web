@@ -32,10 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTheme();
 });
 
-
-/* =========================
-   DATOS DE PERFILES
-========================= */
+/* Datos de los perfiles */
 const profiles = {
   steve: {
     img: {
@@ -130,10 +127,7 @@ const profiles = {
   }
 };
 
-
-/* =========================
-   TEMA
-========================= */
+/* Tema */
 function applyTheme() {
   const savedTheme = localStorage.getItem("theme");
   const isDark = savedTheme === "dark";
@@ -142,12 +136,10 @@ function applyTheme() {
   document.body.classList.add(isDark ? "dark" : "light");
 
   updateProfile(isDark);
+  updateCardImages(isDark);
 }
 
-
-/* =========================
-   PERFIL
-========================= */
+/* Perfiles */
 function updateProfile(isDark) {
   const profileImg = document.getElementById("profile-img");
   if (!profileImg) return;
@@ -171,10 +163,19 @@ function updateProfile(isDark) {
   if (skills) skills.innerHTML = `${profile.skills[mode]}`;
 }
 
+/* Cambia imágenes de las tarjetas */
+function updateCardImages(isDark) {
+  const cardImages = document.querySelectorAll('.card-image img');
+  cardImages.forEach(img => {
+    const lightSrc = img.dataset.light;
+    const darkSrc = img.dataset.dark;
+    if (lightSrc && darkSrc) {
+      img.src = isDark ? darkSrc : lightSrc;
+    }
+  });
+}
 
-/* =========================
-   CAMBIO DIMENSIÓN
-========================= */
+/* Cambia dimension */
 const themeToggle = document.getElementById("theme-toggle");
 const themeIcon = document.getElementById("theme-icon");
 
@@ -199,13 +200,11 @@ if (themeToggle && themeIcon) {
       : "img/btn_up.png";
 
     updateProfile(isDark);
+    updateCardImages(isDark);
   });
 }
 
-
-/* =========================
-   🧭 CARDS
-========================= */
+/* Cards */
 document.querySelectorAll('.card[data-link]').forEach(card => {
   card.style.cursor = 'pointer';
   card.addEventListener('click', () => {
@@ -221,10 +220,7 @@ document.querySelectorAll('.card button').forEach(btn => {
   });
 });
 
-
-/* =========================
-   📱 MENÚ
-========================= */
+/* Menu */
 const menuToggle = document.getElementById('menu-toggle');
 const nav = document.getElementById('nav');
 

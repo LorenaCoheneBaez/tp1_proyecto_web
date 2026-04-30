@@ -16,9 +16,8 @@
 </head>
 
 <body class="loading light">
-  <!-- =========================
-       ⏳ LOADER (modo claro)
-  ========================== -->
+
+  <!-- Loader (modo claro) -->
   <div id="loader" class="loader light">
     <!-- Caja clara -->
     <div class="loader-box loader-box-light">
@@ -30,9 +29,7 @@
     <img src="img/welcome_home.png" class="bikes" alt="bicletas" />
   </div>
 
-  <!-- =========================
-       ⏳ LOADER (modo oscuro)
-  ========================== -->
+  <!-- Loader (modo oscuro) -->
   <div id="loader-dark" class="loader dark" style="display: none">
     <!-- Caja oscura -->
     <div class="loader-box loader-box-dark">
@@ -44,9 +41,7 @@
     <img src="img/welcome_hell.png" class="bikes" alt="silueta" />
   </div>
 
-  <!-- =========================
-       🧭 HEADER / NAV
-  ========================== -->
+  <!-- Header / Nav -->
   <header class="header">
     <img src="img/logo_devs.png" alt="Logo" class="logo-img" />
     <button class="menu-toggle" id="menu-toggle">
@@ -63,11 +58,9 @@
     </nav>
   </header>
 
-  <!-- =========================
-       🧠 CONTENIDO PRINCIPAL
-  ========================== -->
+  <!-- Contenedor principal -->
   <main class="home">
-    <!-- HOME -->
+    <!-- Home -->
     <section class="page-home" id="page-home">
       <div class="portada">
         <h1 class="title">Strange Portafolio</h1>
@@ -77,6 +70,7 @@
           </h2>
       </div>
 
+    <!-- Acerca de nosotros -->
       <section class="about">
         <h2 class="descripcion">Sobre Nosotros</h2>
         <div class="box-about-description">
@@ -107,11 +101,12 @@
 
       </section>
 
+      <!-- Grid con los integrantes -->
       <section class="grid">
         <div class="card" data-link="profile-max.html">
           <div class="card-frame">
             <div class="card-image">
-              <img src="img/max_light.png" alt="Max" />
+              <img src="img/max_light.png" alt="Max" data-light="img/max_light.png" data-dark="img/max_dark.png" />
             </div>
 
             <h2>Gisse</h2>
@@ -124,7 +119,7 @@
         <div class="card">
           <div class="card-frame">
             <div class="card-image">
-              <img src="img/nancy_light.png" alt="Nancy" />
+              <img src="img/nancy_light.png" alt="Nancy" data-light="img/nancy_light.png" data-dark="img/nancy_dark.png" />
             </div>
 
             <h2>Lorena</h2>
@@ -137,7 +132,7 @@
         <div class="card" data-link="profile-steve.html">
           <div class="card-frame">
             <div class="card-image">
-              <img src="img/steve_light.png" alt="Steve" />
+              <img src="img/steve_light.png" alt="Steve" data-light="img/steve_light.png" data-dark="img/steve_dark.png" />
             </div>
 
             <h2>Cristian</h2>
@@ -150,7 +145,7 @@
         <div class="card">
           <div class="card-frame">
             <div class="card-image">
-              <img src="img/robin_light.png" alt="Robin" />
+              <img src="img/robin_light.png" alt="Robin" data-light="img/robin_light.png" data-dark="img/robin_dark.png" />
             </div>
 
             <h2>Cristina</h2>
@@ -163,14 +158,12 @@
     </section>
   </main>
 
-  <!-- =========================
-       📞 FOOTER (simple)
-  ========================== -->
+  <!-- Footer -->
   <footer class="footer">
     <p>Comisión X - 2026</p>
   </footer>
 
-  <!-- JS (lo agregamos después) -->
+  <!-- JavaScript -->
   <script src="js/script.js"></script>
 </body>
 
