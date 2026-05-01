@@ -177,6 +177,14 @@ body.dark .title {
   transform: scale(1.1);
 }
 
+.animate__hinge {
+  animation-duration: 1.5s;
+}
+
+.dark #main-title {
+  animation-fill-mode: none !important;
+}
+
 /* =========================
    🔙 BOTÓN VOLVER
 ========================= */
@@ -627,6 +635,7 @@ body.steve.dark .profile {
 }
 
 /* AGREGAR ROBIN */
+
 
 
 

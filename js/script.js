@@ -32,6 +32,28 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTheme();
 });
 
+function updateTitleAnimation(isDark) {
+  const title = document.getElementById("main-title");
+  if (!title) return;
+
+  // eliminar animaciones anteriores
+  title.classList.remove(
+    "animate__animated",
+    "animate__pulse",
+    "animate__hinge"
+  );
+
+  // reiniciar animación
+  void title.offsetWidth;
+
+  // aplicar según modo
+  if (isDark) {
+    title.classList.add("animate__animated", "animate__hinge");
+  } else {
+    title.classList.add("animate__animated", "animate__pulse");
+  }
+}
+
 /* Datos de los perfiles */
 const profiles = {
   steve: {
@@ -137,6 +159,7 @@ function applyTheme() {
 
   updateProfile(isDark);
   updateCardImages(isDark);
+  updateTitleAnimation(isDark); 
 }
 
 /* Perfiles */
@@ -201,6 +224,7 @@ if (themeToggle && themeIcon) {
 
     updateProfile(isDark);
     updateCardImages(isDark);
+    updateTitleAnimation(isDark);
   });
 }
 
