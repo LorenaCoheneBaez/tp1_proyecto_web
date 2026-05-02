@@ -76,7 +76,8 @@ const profiles = {
     skills: {
       light: "Observación detallada de sistemas y flujos<br>Detección y análisis de vulnerabilidades<br>Reacción rápida ante errores críticos<br>Validación de seguridad y calidad del softwar",
       dark: "Instinto de supervivencia ante errores críticos<br>Detección de anomalías ocultas<br>Trabajo en equipo bajo presión extrema<br>Reacción inmediata ante amenazas del sistema"
-    }
+    },
+    surprise: "img/mind-flayer-stranger-things.gif"
   },
 
   max: {
@@ -99,7 +100,8 @@ const profiles = {
     skills: {
       light: "Pensamiento creativo<br>Atención al detalle<br>Optimización de interfaces<br>Experiencia de Usuario (UX)",
       dark: "Manipulación de interfaces en entornos inestables<br>Precisión visual en escenarios caóticos<br>Detección de errores en sistemas corruptos<br>Adaptación a realidades cambiantes"
-    }
+    },
+    surprise: "img/vecna-stranger-things.gif"
   },
 
   nancy: {
@@ -122,7 +124,8 @@ const profiles = {
     skills: {
       light: "Bases de datos<br>Lógica<br>Debugging",
       dark: "Rastreo de datos<br>Detección de patrones"
-    }
+    },
+    surprise: "img/stranger-things-demogorgon.gif"
   },
 
   robin: {
@@ -146,6 +149,7 @@ const profiles = {
       light: "Análisis<br>Lógica<br>Interpretación",
       dark: "Decodificación<br>Pensamiento abstracto"
     },
+    surprise: "img/roar-stranger-things.gif"
   }
 };
 
@@ -253,3 +257,36 @@ if (menuToggle && nav) {
     nav.classList.toggle('active');
   });
 }
+
+//Animación Sorpresa
+const profileImg = document.getElementById("profile-img");
+
+function getCurrentProfile() {
+  return profileImg.dataset.profile;
+}
+const btn = document.getElementById("surprise-btn-id");
+const profileInfo = document.querySelector(".profile-info");
+
+let isShowingSurprise = false;
+const originalContent = profileInfo.innerHTML;
+
+btn.addEventListener("click", () => {
+  const currentProfile = getCurrentProfile();
+  const surpriseImg = profiles[currentProfile].surprise;
+
+  if (!isShowingSurprise) {
+    profileInfo.innerHTML = `
+      <div class="surprise-container">
+        <img src="${surpriseImg}" alt="surprise" />
+      </div>
+    `;
+
+    btn.textContent = "Cerrar sorpresa";
+    isShowingSurprise = true;
+  } else {
+    profileInfo.innerHTML = originalContent;
+
+    btn.textContent = "¡Sorpresa!";
+    isShowingSurprise = false;
+  }
+});
