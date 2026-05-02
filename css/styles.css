@@ -126,7 +126,7 @@ body.dark .title {
 .menu-toggle span {
   width: 25px;
   height: 3px;
-  background: white;
+  background: #fff;
 }
 
 /* Nav */
@@ -138,7 +138,7 @@ body.dark .title {
 }
 
 .nav-link {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 14px;
   transition: color 0.3s;
@@ -211,8 +211,8 @@ body.dark .home {
 
 body.light .descripcion {
   font-size: 22px;
-  color: black;
-  text-shadow: 1px 1px 3px black;
+  color: #000000;
+  text-shadow: 1px 1px 3px #000000;
   font-family: "Bolton";
 }
 
@@ -228,9 +228,9 @@ body.dark .descripcion {
   max-width: 900px;
   margin: 30px auto;
   font-size: 18px;
-  color: white;
+  color: #fff;
   line-height: 1.6;
-  text-shadow: 1px 1px 2px black;
+  text-shadow: 1px 1px 2px #000000;
   text-align: justify;
 }
 
@@ -264,7 +264,6 @@ body.dark .about-description {
   position: relative;
   width: 240px;
   height: 340px;
-  cursor: pointer;
   transition: 0.4s;
   isolation: isolate;
 }
@@ -318,7 +317,7 @@ body.dark .about-description {
 .card-frame h2 {
   font-family: 'StrangerThings', serif;
   color: #ff2a2a;
-  text-shadow: 0 0 10px red;
+  text-shadow: 0 0 10px #ff0000;
   letter-spacing: 2px;
 }
 
@@ -327,10 +326,10 @@ body.dark .about-description {
 }
 
 /* Boton */
-.card-frame a{
+.card-frame a {
   background: transparent;
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #FF0000;
+  color: #FF0000;
   padding: 8px;
   cursor: pointer;
   transition: 0.3s;
@@ -338,24 +337,24 @@ body.dark .about-description {
 }
 
 .card-frame a:hover {
-  background: red;
-  color: black;
-  box-shadow: 0 0 10px red;
+  background: #FF0000;
+  color: #000000;
+  box-shadow: 0 0 10px #FF0000;
 }
 
 .card-frame button {
   background: transparent;
-  border: 1px solid red;
-  color: red;
+  border: 1px solid #FF0000;
+  color: #FF0000;
   padding: 8px;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .card-frame button:hover {
-  background: red;
-  color: black;
-  box-shadow: 0 0 10px red;
+  background: #FF0000;
+  color: #000000;
+  box-shadow: 0 0 10px #FF0000;
 }
 
 /* Hover */
@@ -378,16 +377,16 @@ body.dark .about-description {
 
 .card:hover h2 {
   text-shadow:
-    0 0 10px red,
-    0 0 20px red,
-    0 0 40px red;
+    0 0 10px #FF0000,
+    0 0 20px #FF0000,
+    0 0 40px #FF0000;
 }
 
 .card:hover {
   transform: scale(1.07) rotateX(4deg);
   box-shadow:
-    0 0 20px red,
-    0 0 40px red,
+    0 0 20px #FF0000,
+    0 0 40px #FF0000,
     0 0 80px rgba(255, 0, 0, 0.6);
 }
 
@@ -435,11 +434,11 @@ body.dark .about-description {
 
   0%,
   100% {
-    text-shadow: 0 0 10px red, 0 0 20px red;
+    text-shadow: 0 0 10px #FF0000, 0 0 20px #FF0000;
   }
 
   50% {
-    text-shadow: 0 0 5px red, 0 0 40px red;
+    text-shadow: 0 0 5px #FF0000, 0 0 40px #FF0000;
   }
 }
 
@@ -456,7 +455,7 @@ body.dark .about-description {
   content: "";
   position: absolute;
   inset: -2px;
-  border: 1px solid red;
+  border: 1px solid #FF0000;
   opacity: 0.3;
   filter: blur(6px);
   background: radial-gradient(circle, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9));
@@ -485,13 +484,13 @@ body.dark .about-description {
     0 0 20px rgba(255, 0, 0, 0.3),
     0 0 60px rgba(255, 0, 0, 0.2);
 
-  color: white;
+  color: #fff;
 }
 
 #profile-name {
   font-family: 'StrangerThings', serif;
   color: #ff2a2a;
-  text-shadow: 0 0 10px red;
+  text-shadow: 0 0 10px #FF0000;
   letter-spacing: 2px;
 }
 
@@ -515,8 +514,8 @@ body.dark .about-description {
   width: 260px;
   margin-top: -20px;
   border-radius: 12px;
-  border: 2px solid rgba(255,0,0,0.4);
-  box-shadow: 0 0 15px rgba(255,0,0,0.3);
+  border: 2px solid rgba(255, 0, 0, 0.4);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
 }
 
 .profile-left .quote {
@@ -525,7 +524,7 @@ body.dark .about-description {
   text-align: center;
   max-width: 240px;
   color: #ccc;
-  border-top: 1px solid rgba(255,0,0,0.3);
+  border-top: 1px solid rgba(255, 0, 0, 0.3);
   padding-top: 10px;
 }
 
@@ -541,7 +540,7 @@ body.dark .about-description {
 }
 
 .profile-block {
-  border-left: 3px solid red;
+  border-left: 3px solid #FF0000;
   padding-left: 15px;
 }
 
@@ -567,10 +566,23 @@ body.dark .about-description {
 }
 
 @keyframes flicker {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.97; }
-  52% { opacity: 0.9; }
-  54% { opacity: 1; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.97;
+  }
+
+  52% {
+    opacity: 0.9;
+  }
+
+  54% {
+    opacity: 1;
+  }
 }
 
 .profile-info {
@@ -642,14 +654,14 @@ body.dark .bitacora .title {
 body.light .bitacora .subtitle {
   font-size: 24px;
   color: #000;
-  text-shadow: 1px 1px 3px white;
+  text-shadow: 1px 1px 3px #fff;
   margin-bottom: 40px;
 }
 
 body.dark .bitacora .subtitle {
   font-size: 24px;
-  color: white;
-  text-shadow: 1px 1px 3px black;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000000;
   margin-bottom: 40px;
 }
 
@@ -674,9 +686,17 @@ body.dark .bitacora .subtitle {
 }
 
 /* Delays animación */
-.bitacora-content:nth-child(1) { animation-delay: 0.2s; }
-.bitacora-content:nth-child(2) { animation-delay: 0.4s; }
-.bitacora-content:nth-child(3) { animation-delay: 0.6s; }
+.bitacora-content:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.bitacora-content:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.bitacora-content:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 /* Modo oscuro cards */
 body.dark .bitacora-content {
@@ -689,7 +709,7 @@ body.dark .bitacora-content {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at top, rgba(255,0,0,0.15), transparent 70%);
+  background: radial-gradient(circle at top, rgba(255, 0, 0, 0.15), transparent 70%);
   opacity: 0;
   transition: 0.4s;
 }
@@ -702,7 +722,7 @@ body.dark .bitacora-content {
   top: 0;
   width: 4px;
   height: 100%;
-  background: linear-gradient(to bottom, transparent, red, transparent);
+  background: linear-gradient(to bottom, transparent, #FF0000, transparent);
   opacity: 0.7;
 }
 
@@ -726,9 +746,9 @@ body.dark .bitacora-content {
 body.dark .bitacora-content h3 {
   color: #ff2a2a;
   text-shadow:
-    0 0 5px red,
-    0 0 10px darkred,
-    0 0 20px red;
+    0 0 5px #FF0000,
+    0 0 10px dark#FF0000,
+    0 0 20px #FF0000;
 }
 
 .bitacora-content p {
@@ -736,7 +756,7 @@ body.dark .bitacora-content h3 {
   line-height: 1.6;
   font-size: 18px;
   transition: 0.3s;
-  text-align: justify; 
+  text-align: justify;
 }
 
 body.dark .bitacora-content p {
@@ -750,6 +770,7 @@ body.dark .bitacora-content p {
     opacity: 0;
     transform: translateY(40px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -764,7 +785,7 @@ body.dark .bitacora-content p {
 }
 
 .footer p {
-  color: white;
+  color: #fff;
 }
 
 /* Ocultar contenido durante loading */

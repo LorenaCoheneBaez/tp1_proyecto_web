@@ -1,171 +1,193 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hawkins Devs</title>
+    <link rel="icon" href="img/logo_web3.png" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hawkins Devs</title>
-  <link rel="icon" href="img/logo_web3.png" type="image/x-icon" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Inter:wght@300;400;600&display=swap"
-    rel="stylesheet" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
+  <body class="loading light">
+    <!-- Loader (modo claro) -->
+    <div id="loader" class="loader light">
+      <!-- Caja clara -->
+      <div class="loader-box loader-box-light">
+        <h2>¡Bienvenidos!</h2>
+        <p>Estas entrando al portafolio</p>
+      </div>
 
-<body class="loading light">
-
-  <!-- Loader (modo claro) -->
-  <div id="loader" class="loader light">
-    <!-- Caja clara -->
-    <div class="loader-box loader-box-light">
-      <h2>¡Bienvenidos!</h2>
-      <p>Estas entrando al portafolio</p>
+      <!-- Silueta bicicletas -->
+      <img src="img/welcome_home.png" class="bikes" alt="bicletas" />
     </div>
 
-    <!-- Silueta bicicletas -->
-    <img src="img/welcome_home.png" class="bikes" alt="bicletas" />
-  </div>
+    <!-- Loader (modo oscuro) -->
+    <div id="loader-dark" class="loader dark" style="display: none">
+      <!-- Caja oscura -->
+      <div class="loader-box loader-box-dark">
+        <h2>Bienvenido al Infierno...</h2>
+        <p>Has cruzado al Upside Down</p>
+      </div>
 
-  <!-- Loader (modo oscuro) -->
-  <div id="loader-dark" class="loader dark" style="display: none">
-    <!-- Caja oscura -->
-    <div class="loader-box loader-box-dark">
-      <h2>Bienvenido al Infierno...</h2>
-      <p>Has cruzado al Upside Down</p>
+      <!-- Silueta -->
+      <img src="img/welcome_hell.png" class="bikes" alt="silueta" />
     </div>
 
-    <!-- Silueta -->
-    <img src="img/welcome_hell.png" class="bikes" alt="silueta" />
-  </div>
-
-  <!-- Header / Nav -->
-  <header class="header">
-    <img src="img/logo_devs.png" alt="Logo" class="logo-img" />
-    <button class="menu-toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav class="nav" id="nav">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="bitacora.html" class="nav-link">Bitácora</a>
-      <button id="theme-toggle" class="theme-btn">
-        <img id="theme-icon" src="img/btn_down.png" alt="Modo Oscuro" />
+    <!-- Header / Nav -->
+    <header class="header">
+      <img src="img/logo_devs.png" alt="Logo" class="logo-img" />
+      <button class="menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
       </button>
-    </nav>
-  </header>
+      <nav class="nav" id="nav">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="bitacora.html" class="nav-link">Bitácora</a>
+        <button id="theme-toggle" class="theme-btn">
+          <img id="theme-icon" src="img/btn_down.png" alt="Modo Oscuro" />
+        </button>
+      </nav>
+    </header>
 
-  <!-- Contenedor principal -->
-  <main class="home">
-    <!-- Home -->
-    <section class="page-home" id="page-home">
-      <div class="portada">
-        <h1 class="title" id="main-title">Strange Portafolio</h1>
-        <h2 class="descripcion">Bienvenidos a nuestro pueblo.</h2>
+    <!-- Contenedor principal -->
+    <main class="home">
+      <!-- Home -->
+      <section class="page-home" id="page-home">
+        <div class="portada">
+          <h1 class="title" id="main-title">Strange Portafolio</h1>
+          <h2 class="descripcion">Bienvenidos a nuestro pueblo.</h2>
           <h2 class="descripcion">
             Descubre las habilidades de nuestros expertos.
           </h2>
-      </div>
-
-    <!-- Acerca de nosotros -->
-      <section class="about">
-        <h2 class="descripcion">Sobre Nosotros</h2>
-        <div class="box-about-description">
-          <p class="about-description">
-            Somos un equipo de cinco desarrolladores en formación que decidieron
-            unir sus habilidades para construir algo más que una simple página
-            web. Este proyecto representa nuestro primer trabajo conjunto como
-            equipo, donde cada integrante aporta su propia visión, estilo y
-            forma de entender el desarrollo.
-          </p>
-
-          <p class="about-description">
-            Inspirados en la dualidad entre lo cotidiano y lo desconocido,
-            diseñamos una experiencia que refleja dos mundos: uno visible,
-            ordenado y familiar… y otro oculto, oscuro e impredecible. Así como
-            en Hawkins, detrás de cada interfaz existe una capa más profunda
-            donde la creatividad, la lógica y la experimentación se entrelazan.
-          </p>
-
-          <p class="about-description">
-            Nuestro objetivo es crear una plataforma que no solo muestre quiénes
-            somos, sino también cómo pensamos, cómo construimos y cómo
-            transformamos ideas en experiencias digitales. Cada perfil, cada
-            interacción y cada detalle está pensado como parte de este universo
-            que estamos desarrollando.
-          </p>
         </div>
 
+        <!-- Acerca de nosotros -->
+        <section class="about">
+          <h2 class="descripcion">Sobre Nosotros</h2>
+          <div class="box-about-description">
+            <p class="about-description">
+              Somos un equipo de cinco desarrolladores en formación que
+              decidieron unir sus habilidades para construir algo más que una
+              simple página web. Este proyecto representa nuestro primer trabajo
+              conjunto como equipo, donde cada integrante aporta su propia
+              visión, estilo y forma de entender el desarrollo.
+            </p>
+
+            <p class="about-description">
+              Inspirados en la dualidad entre lo cotidiano y lo desconocido,
+              diseñamos una experiencia que refleja dos mundos: uno visible,
+              ordenado y familiar… y otro oculto, oscuro e imp#FF0000ecible. Así
+              como en Hawkins, detrás de cada interfaz existe una capa más
+              profunda donde la creatividad, la lógica y la experimentación se
+              entrelazan.
+            </p>
+
+            <p class="about-description">
+              Nuestro objetivo es crear una plataforma que no solo muestre
+              quiénes somos, sino también cómo pensamos, cómo construimos y cómo
+              transformamos ideas en experiencias digitales. Cada perfil, cada
+              interacción y cada detalle está pensado como parte de este
+              universo que estamos desarrollando.
+            </p>
+          </div>
+        </section>
+
+        <!-- Grid con los integrantes -->
+        <section class="grid">
+          <div class="card">
+            <div class="card-frame">
+              <div class="card-image">
+                <img
+                  src="img/max_light.png"
+                  alt="Max"
+                  data-light="img/max_light.png"
+                  data-dark="img/max_dark.png"
+                />
+              </div>
+
+              <h2>Gisse</h2>
+              <p>Front-end Developer</p>
+
+              <a href="profile-max.html">Ver Perfil</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-frame">
+              <div class="card-image">
+                <img
+                  src="img/nancy_light.png"
+                  alt="Nancy"
+                  data-light="img/nancy_light.png"
+                  data-dark="img/nancy_dark.png"
+                />
+              </div>
+
+              <h2>Lorena</h2>
+              <p>Back-end Developer</p>
+
+              <a href="profile-nancy.html">Ver Perfil</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-frame">
+              <div class="card-image">
+                <img
+                  src="img/steve_light.png"
+                  alt="Steve"
+                  data-light="img/steve_light.png"
+                  data-dark="img/steve_dark.png"
+                />
+              </div>
+
+              <h2>Cristian</h2>
+              <p>QA Tester</p>
+
+              <a href="profile-steve.html">Ver Perfil</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-frame">
+              <div class="card-image">
+                <img
+                  src="img/robin_light.png"
+                  alt="Robin"
+                  data-light="img/robin_light.png"
+                  data-dark="img/robin_dark.png"
+                />
+              </div>
+
+              <h2>Cristina</h2>
+              <p>Data Analyst</p>
+
+              <a href="profile-robin.html">Ver Perfil</a>
+            </div>
+          </div>
+        </section>
       </section>
+    </main>
 
-      <!-- Grid con los integrantes -->
-      <section class="grid">
-        <div class="card" data-link="profile-max.html">
-          <div class="card-frame">
-            <div class="card-image">
-              <img src="img/max_light.png" alt="Max" data-light="img/max_light.png" data-dark="img/max_dark.png" />
-            </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>Hawkins Dev - Comisión D 2026</p>
+    </footer>
 
-            <h2>Gisse</h2>
-            <p>Front-end Developer</p>
-
-            <button onclick="window.location.href='profile-max.html'">Ver Perfil</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-frame">
-            <div class="card-image">
-              <img src="img/nancy_light.png" alt="Nancy" data-light="img/nancy_light.png" data-dark="img/nancy_dark.png" />
-            </div>
-
-            <h2>Lorena</h2>
-            <p>Back-end Developer</p>
-
-            <a href="profile-nancy.html">Ver Perfil</a>
-          </div>
-        </div>
-
-        <div class="card" data-link="profile-steve.html">
-          <div class="card-frame">
-            <div class="card-image">
-              <img src="img/steve_light.png" alt="Steve" data-light="img/steve_light.png" data-dark="img/steve_dark.png" />
-            </div>
-
-            <h2>Cristian</h2>
-            <p>QA Tester</p>
-            
-            <button onclick="window.location.href='profile-steve.html'">Ver Perfil</button>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="card-frame">
-            <div class="card-image">
-              <img src="img/robin_light.png" alt="Robin" data-light="img/robin_light.png" data-dark="img/robin_dark.png" />
-            </div>
-
-            <h2>Cristina</h2>
-            <p>Data Analyst</p>
-
-            <a href="profile-robin.html">Ver Perfil</a>
-          </div>
-        </div>
-      </section>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <p> Hawkins Dev - Comisión D 2026</p>
-  </footer>
-
-  <!-- JavaScript -->
-  <script src="js/script.js"></script>
-</body>
-
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
 </html>
