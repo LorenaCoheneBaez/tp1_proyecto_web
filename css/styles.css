@@ -1,6 +1,4 @@
-/* =========================
-   🔄 RESET
-========================= */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +10,7 @@
   src: url('./font/Bolton.ttf') format('truetype');
 }
 
-/* =========================
-   🧠 BODY
-========================= */
+/* Body */
 body {
   font-family: 'Inter', sans-serif;
   background: #0d0d0e;
@@ -25,9 +21,7 @@ body.loading {
   overflow: hidden;
 }
 
-/* =========================
-   ⏳ LOADER
-========================= */
+/* Loader */
 .loader {
   position: fixed;
   top: 0;
@@ -43,7 +37,7 @@ body.loading {
   z-index: 9999;
 }
 
-/* fondos dinámicos */
+/* Fondos dinámicos */
 body.light #loader {
   background: url('../img/loading_light.png') center/cover no-repeat;
 }
@@ -52,7 +46,7 @@ body.dark #loader {
   background: url('../img/loading_dark.png') center/cover no-repeat;
 }
 
-/* caja */
+/* Caja */
 .loader-box {
   position: relative;
   display: flex;
@@ -71,7 +65,7 @@ body.dark #loader {
   margin-bottom: 10px;
 }
 
-/* imagen */
+/* Imagen */
 .bikes {
   position: absolute;
   bottom: 30%;
@@ -79,9 +73,7 @@ body.dark #loader {
   z-index: 2;
 }
 
-/* =========================
-   🧭 HEADER
-========================= */
+/* Header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -103,7 +95,7 @@ body.dark #loader {
   letter-spacing: 3px;
 }
 
-/* 🌞 TITLE CLARO */
+/* Titulo modo claro */
 body.light .title {
   color: #e50914;
   text-shadow:
@@ -112,7 +104,7 @@ body.light .title {
     0 0 30px #ff0000;
 }
 
-/* 🌙 TITLE OSCURO */
+/* Titulo modo oscuro */
 body.dark .title {
   color: #000000;
   -webkit-text-stroke: 2px #e50914;
@@ -121,9 +113,7 @@ body.dark .title {
     0 0 20px #ff0000;
 }
 
-/* =========================
-   🍔 MENU
-========================= */
+/* Menu */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -139,7 +129,7 @@ body.dark .title {
   background: white;
 }
 
-/* NAV */
+/* Nav */
 .nav {
   display: flex;
   align-items: center;
@@ -159,9 +149,7 @@ body.dark .title {
   color: #a80000;
 }
 
-/* =========================
-   🌗 THEME BUTTON
-========================= */
+/* Aspecto del Boton */
 .theme-btn {
   background: none;
   border: none;
@@ -185,9 +173,7 @@ body.dark .title {
   animation-fill-mode: none !important;
 }
 
-/* =========================
-   🔙 BOTÓN VOLVER
-========================= */
+/* Boton volver */
 .back-btn {
   position: fixed;
   top: 110px;
@@ -199,9 +185,7 @@ body.dark .title {
   width: 70px;
 }
 
-/* =========================
-   🧠 HOME
-========================= */
+/* Home */
 .home {
   text-align: center;
   padding: 20px;
@@ -214,7 +198,7 @@ body.dark .home {
   background: url('../img/upside-down.png') center/cover no-repeat;
 }
 
-/* portada */
+/* Portada */
 .portada {
   max-width: 800px;
   margin: 20px auto;
@@ -239,7 +223,7 @@ body.dark .descripcion {
   font-family: "Bolton";
 }
 
-/* about */
+/* Acerca de nosotros */
 .about {
   max-width: 900px;
   margin: 30px auto;
@@ -266,9 +250,7 @@ body.dark .about-description {
   color: #fff;
 }
 
-/* =========================
-   🟥 CARDS
-========================= */
+/* Perfiles */
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -277,7 +259,7 @@ body.dark .about-description {
   padding: 80px 0;
 }
 
-/* CARD */
+/* Cards */
 .card {
   position: relative;
   width: 240px;
@@ -287,7 +269,7 @@ body.dark .about-description {
   isolation: isolate;
 }
 
-/* BORDE GLOW */
+/* Borde */
 .card::before,
 .card::after {
   position: absolute;
@@ -304,7 +286,7 @@ body.dark .about-description {
   transition: 0.4s;
 }
 
-/* NIEBLA */
+/* Niebla */
 .card::after {
   content: "";
   inset: 0;
@@ -313,7 +295,7 @@ body.dark .about-description {
   transition: 0.4s;
 }
 
-/* CONTENIDO */
+/* Contenido */
 .card-frame {
   position: relative;
   height: 100%;
@@ -326,13 +308,13 @@ body.dark .about-description {
   justify-content: space-between;
 }
 
-/* IMAGEN */
+/* Imagen */
 .card-image img {
   width: 100%;
   transition: 0.4s;
 }
 
-/* TEXTO */
+/* Texto */
 .card-frame h2 {
   font-family: 'StrangerThings', serif;
   color: #ff2a2a;
@@ -344,7 +326,7 @@ body.dark .about-description {
   color: #ccc;
 }
 
-/* BOTÓN */
+/* Boton */
 .card-frame a{
   background: transparent;
   border: 1px solid red;
@@ -376,10 +358,7 @@ body.dark .about-description {
   box-shadow: 0 0 10px red;
 }
 
-
-/* =========================
-   👹 HOVER EFECTO
-========================= */
+/* Hover */
 .card:hover::before {
   opacity: 1;
 }
@@ -431,9 +410,7 @@ body.dark .about-description {
   animation: textFlicker 1.5s infinite;
 }
 
-/* =========================
-   ⚡ ANIMACIONES
-========================= */
+/* Animaciones */
 
 @keyframes borderFlicker {
 
@@ -466,10 +443,7 @@ body.dark .about-description {
   }
 }
 
-
-/* =========================
-   👤 PROFILE
-========================= */
+/* Perfil */
 .profile {
   min-height: 100vh;
   display: flex;
@@ -529,7 +503,6 @@ body.dark .about-description {
   font-style: italic;
   opacity: 0.8;
 }
-
 
 .profile-left {
   display: flex;
@@ -606,9 +579,7 @@ body.dark .about-description {
   gap: 20px;
 }
 
-/* =========================
-   👤 FONDOS
-========================= */
+/* Fondos */
 
 body.max.light .profile {
   background: url('../img/background_max_profile_light.png') center/cover no-repeat;
@@ -634,14 +605,15 @@ body.steve.dark .profile {
   background: url('../img/background_stevee_profile_dark.jpg') center/cover no-repeat;
 }
 
-/* AGREGAR ROBIN */
+body.robin.light .profile {
+  background: url('../img/background_robin_profile_light.jpg') center/cover no-repeat;
+}
 
+body.robin.dark .profile {
+  background: url('../img/background_robin_profile_dark.jpg') center/cover no-repeat;
+}
 
-
-
-/* =========================
-   📖 BITÁCORA
-========================= */
+/* Bitácora */
 .bitacora {
   min-height: 100vh;
   padding: 40px 20px;
@@ -651,7 +623,7 @@ body.steve.dark .profile {
   text-align: center;
 }
 
-/* TÍTULO */
+/* Titulo */
 body.light .bitacora .title {
   font-family: 'Orbitron', sans-serif;
   font-size: 48px;
@@ -681,7 +653,7 @@ body.dark .bitacora .subtitle {
   margin-bottom: 40px;
 }
 
-/* CAJA CENTRAL */
+/* Caja central */
 .bitacora-content {
   width: 90%;
   max-width: 900px;
@@ -701,12 +673,12 @@ body.dark .bitacora .subtitle {
   opacity: 0;
 }
 
-/* delays animación */
+/* Delays animación */
 .bitacora-content:nth-child(1) { animation-delay: 0.2s; }
 .bitacora-content:nth-child(2) { animation-delay: 0.4s; }
 .bitacora-content:nth-child(3) { animation-delay: 0.6s; }
 
-/* 🌑 modo oscuro cards */
+/* Modo oscuro cards */
 body.dark .bitacora-content {
   background: rgba(10, 0, 0, 0.9);
   border: 1px solid rgba(255, 0, 0, 0.3);
@@ -722,7 +694,7 @@ body.dark .bitacora-content {
   transition: 0.4s;
 }
 
-/* línea roja lateral */
+/* Línea roja lateral */
 .bitacora-content::after {
   content: "";
   position: absolute;
@@ -771,9 +743,7 @@ body.dark .bitacora-content p {
   color: #ddd;
 }
 
-/* =========================
-   ANIMACIÓN
-========================= */
+/* Animacion */
 
 @keyframes fadeUp {
   from {
@@ -786,9 +756,7 @@ body.dark .bitacora-content p {
   }
 }
 
-/* =========================
-   📞 FOOTER
-========================= */
+/* Footer */
 .footer {
   text-align: center;
   padding: 20px;
@@ -799,9 +767,7 @@ body.dark .bitacora-content p {
   color: white;
 }
 
-/* =========================
-   🚫 OCULTAR CONTENIDO DURANTE LOADING
-========================= */
+/* Ocultar contenido durante loading */
 body.loading main,
 body.loading header,
 body.loading footer {
@@ -809,21 +775,16 @@ body.loading footer {
   visibility: hidden;
 }
 
-/* transición suave cuando aparece */
+/* Transición suave cuando aparece */
 main,
 header,
 footer {
   transition: opacity 0.6s ease;
 }
 
+/* Responsive */
 
-/* =========================
-   📱 RESPONSIVE
-========================= */
-
-/* =========================
-   💻 1200px Pantallas de escritorio
-========================= */
+/* 1200px Pantallas de escritorio */
 @media (max-width: 1200px) {
 
   .logo-img {
@@ -847,12 +808,10 @@ footer {
   }
 }
 
-/* =========================
-   📱 900px Tablets o pantallas medianas
-========================= */
+/* 900px Tablets o pantallas medianas */
 @media (max-width: 900px) {
 
-  /* NAV MOBILE */
+  /* Nav mobile */
   .menu-toggle {
     display: flex;
   }
@@ -873,7 +832,7 @@ footer {
     display: flex;
   }
 
-  /* GRID */
+  /* Grid */
   .grid {
     gap: 20px;
   }
@@ -891,7 +850,7 @@ footer {
     font-size: 20px;
   }
 
-  /* PROFILE */
+  /* Profile */
   .profile-card {
     flex-direction: column;
     align-items: center;
@@ -906,7 +865,7 @@ footer {
     max-width: 100%;
   }
 
-  /* BITÁCORA */
+  /* Bitácora */
   .bitacora .title {
     font-size: 36px;
   }
@@ -923,7 +882,7 @@ footer {
     font-size: 16px;
   }
 
-  /* BOTON VOLVER */
+  /* Boton volver */
   .back-btn {
     top: 90px;
   }
@@ -934,12 +893,10 @@ footer {
   }
 }
 
-/* =========================
-   📱 400px Dispositivos moviles pequeños
-========================= */
+/* 400px Dispositivos moviles pequeños */
 @media (max-width: 400px) {
 
-  /* GRID -> UNA COLUMNA */
+  /* Grid una columna */
   .grid {
     flex-direction: column;
     align-items: center;
@@ -950,7 +907,7 @@ footer {
     max-width: 300px;
   }
 
-  /* PORTADA */
+  /* Portada */
   .portada img {
     max-width: 280px;
   }
@@ -964,7 +921,7 @@ footer {
     padding: 0 10px;
   }
 
-  /* PROFILE */
+  /* Perfil */
   .profile-card {
     padding: 15px;
   }
@@ -981,7 +938,7 @@ footer {
     font-size: 13px;
   }
 
-  /* BITÁCORA */
+  /* Bitácora */
   .bitacora .title {
     font-size: 28px;
   }
@@ -998,7 +955,7 @@ footer {
     font-size: 14px;
   }
 
-  /* BOTON VOLVER */
+  /* Boton volver */
   .back-btn {
     top: 80px;
     left: 10px;
