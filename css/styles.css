@@ -685,6 +685,9 @@ body.dark .bitacora .subtitle {
 .bitacora-content {
   width: 90%;
   max-width: 900px;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
 
   background: rgba(255, 255, 255, 0.9);
   border-radius: 20px;
@@ -692,42 +695,95 @@ body.dark .bitacora .subtitle {
   padding: 40px 30px;
 
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+
+  transition: 0.4s;
+  animation: fadeUp 0.8s ease forwards;
+  opacity: 0;
 }
 
-/* ENTRADAS */
-.bitacora-entry {
-  position: relative;
-  margin-bottom: 40px;
-  padding-left: 30px;
+/* delays animación */
+.bitacora-content:nth-child(1) { animation-delay: 0.2s; }
+.bitacora-content:nth-child(2) { animation-delay: 0.4s; }
+.bitacora-content:nth-child(3) { animation-delay: 0.6s; }
+
+/* 🌑 modo oscuro cards */
+body.dark .bitacora-content {
+  background: rgba(10, 0, 0, 0.9);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
 }
 
-/* LINEA ROJA */
-.bitacora-entry::before {
+.bitacora-content::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top, rgba(255,0,0,0.15), transparent 70%);
+  opacity: 0;
+  transition: 0.4s;
+}
+
+/* línea roja lateral */
+.bitacora-content::after {
   content: "";
   position: absolute;
   left: 0;
-  top: 5px;
-
-  width: 5px;
-  height: 80%;
-
-  background: #b30000;
-  border-radius: 3px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, red, transparent);
+  opacity: 0.7;
 }
 
-/* TITULO DE DIA */
-.bitacora-entry h3 {
+.bitacora-content:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 0 25px rgba(255, 0, 0, 0.4);
+}
+
+.bitacora-content:hover::before {
+  opacity: 1;
+}
+
+.bitacora-content h3 {
   font-family: 'Orbitron', sans-serif;
-  color: #b30000;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   font-size: 22px;
+  letter-spacing: 1px;
+  color: #b30000;
 }
 
-/* TEXTO */
-.bitacora-entry p {
+body.dark .bitacora-content h3 {
+  color: #ff2a2a;
+  text-shadow:
+    0 0 5px red,
+    0 0 10px darkred,
+    0 0 20px red;
+}
+
+.bitacora-content p {
   color: #333;
   line-height: 1.6;
   font-size: 18px;
+  transition: 0.3s;
+  text-align: justify; 
+}
+
+body.dark .bitacora-content p {
+  color: #ddd;
+}
+
+/* =========================
+   ANIMACIÓN
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =========================
