@@ -986,3 +986,32 @@ footer {
     width: 55px;
   }
 }
+
+.surprise-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.surprise-container img {
+  max-width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+}
+
+.btn-surprice {
+  background: transparent;
+  border: 1px solid #FF0000;
+  color: #FF0000;
+  padding: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.btn-surprice:hover {
+  background: #FF0000;
+  color: #000000;
+  box-shadow: 0 0 10px #FF0000;
+}
