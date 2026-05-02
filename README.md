@@ -1,4 +1,4 @@
-# 🚲 Hawkins Devs - Strange Portafolio
+# Strange Portafolio
 
 > *"Bienvenidos a nuestro pueblo. Descubre las habilidades de nuestros expertos."*
 
