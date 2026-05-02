@@ -13,7 +13,7 @@ El sitio incluye funcionalidades dinámicas como un cargador inicial (loader) te
 
 - **Lorena Cohene Baez** - *Back-end Developer / Data Hunter* - [GitHub](https://github.com/LorenaCoheneBaez)
 - **Gisela Colmeiro (Gisse)** - *Front-end Developer / Reality Breaker* - [GitHub](#)
-- **Cristian** - *QA Tester / Monster Hunter* - [GitHub](#)
+- **Cristian Vivar** - *QA Tester / Monster Hunter* - [GitHub](#)
 - **Cristina Murguía** - *Data Analyst / Code Breaker* - [GitHub](#)
 
 ---
