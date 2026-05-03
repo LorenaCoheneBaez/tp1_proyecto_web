@@ -95,10 +95,11 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
 
 5. **Loader Temático**:
    - *¿Qué hace?* Detecta qué modo está activo y muestra un cargador inicial ("Bienvenidos" vs "Bienvenido al infierno") que desaparece con un *fade out* luego de 1.2 segundos.
-   - *Ubicación*: Funciona en base a los divs con id `loader` y `loader-dark`.
-   
+   - *Ubicación*: Funciona en base a los divs con id `loader-light` y `loader-dark`.
+
    📸 *Captura del Loader inicial:*
-   <br>![Captura del Loader](img/screenshots/loader.png)
+   <br>![Captura del Loader light](img/screenshots/loader_light.png)
+   <br>![Captura del Loader dark](img/screenshots/loader_dark.png)
 
 6. **Animación Sorpresa**:
    - *¿Qué hace?* Controla el botón "¡Sorpresa!" en cada perfil. Al hacer clic, reemplaza temporalmente la información del perfil con un GIF animado temático (como el Mind Flayer, Vecna o el Demogorgon), alternando también el texto del botón para permitir cerrarlo.
