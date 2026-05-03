@@ -11,10 +11,10 @@ El sitio incluye funcionalidades dinámicas como un cargador inicial (loader) te
 
 ## 👥 Integrantes
 
-- **Lorena Cohene Baez** - *Back-end Developer / Data Hunter* - [GitHub](https://github.com/LorenaCoheneBaez)
-- **Gisela Colmeiro (Gisse)** - *Front-end Developer / Reality Breaker* - [GitHub](https://github.com/gissestephy)
-- **Cristian Vivar** - *QA Tester / Monster Hunter* - [GitHub](https://github.com/ecvivar)
-- **Cristina Murguía** - *Data Analyst / Code Breaker* - [GitHub](https://github.com/crismurbaez)
+- **Lorena Cohene Baez** - *Back-end Developer / Data Hunter* - [![GitHub](img/github.png)](https://github.com/LorenaCoheneBaez)
+- **Gisela Colmeiro (Gisse)** - *Front-end Developer / Reality Breaker* - [![GitHub](img/github.png)](https://github.com/gissestephy)
+- **Cristian Vivar** - *QA Tester / Monster Hunter* - [![GitHub](img/github.png)](https://github.com/ecvivar)
+- **Cristina Murguía** - *Data Analyst / Code Breaker* - [![GitHub](img/github.png)](https://github.com/crismurbaez)
 
 ---
 
