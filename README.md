@@ -1,6 +1,6 @@
 # Strange Portafolio
 
-🔗 **Deploy:** *[Ingresa el enlace de Vercel aquí]*
+🔗 **Deploy:** https://tp1-grupo-17-hawkins-dev-com-d-26.vercel.app/index.html
 
 > *"Bienvenidos a nuestro pueblo. Descubre las habilidades de nuestros expertos."*
 
