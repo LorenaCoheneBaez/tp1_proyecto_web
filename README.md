@@ -83,7 +83,7 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
    - *¿Qué hace?* Cambia el contenido interno de la página de perfil (Imagen, Rol, Frase destacada, Descripción y Habilidades) dependiendo del modo activado, obteniendo los datos de un objeto `profiles`.
    - *Ubicación*: En cada `profile-*.html`.
 
-   📸 *Captura de ejemplo del modo oscuro y cambio de textos:*
+   📸 *Captura de ejemplo del modo light - dark y cambio de textos:*
    <br>![Captura de Perfil Dinámico Light](img/screenshots/profile_light.png)
    <br>![Captura de Perfil Dinámico Dark](img/screenshots/profile_dark.png)
 
