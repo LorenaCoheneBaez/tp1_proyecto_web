@@ -75,7 +75,7 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
 
 1. **Gestor de Tema (`applyTheme` y EventListener en el botón de toggle)**:
    - *¿Qué hace?* Alterna la clase `light` o `dark` en el `body` de las páginas y lo guarda en `localStorage` para recordar la elección del usuario en toda su navegación.
-   - *Ubicación*: Se ejecuta en todas las páginas (Portadas y Perfiles).
+   - *Ubicación*: Se ejecuta en todas las páginas, ubicado en la parte superior derecha (Portadas y Perfiles).
    <br>![Captura del toggle en modo light](img/screenshots/toggle_light.png)
    <br>![Captura del toggle en modo dark](img/screenshots/toggle_dark.png)
 
