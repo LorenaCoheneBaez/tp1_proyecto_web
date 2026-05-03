@@ -90,6 +90,8 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
 3. **Tarjetas de Portada (`updateCardImages(isDark)`)**:
    - *¿Qué hace?* Cambia las imágenes (avatar normal y su versión "corrompida") de las *cards* de presentación en la Home, leyendo los atributos `data-light` y `data-dark`.
    - *Ubicación*: `index.html`.
+   <br>![Captura de Tarjetas Dinámicas Light](img/screenshots/cards_light.png)
+   <br>![Captura de Tarjetas Dinámicas Dark](img/screenshots/cards_dark.png)
 
 4. **Animaciones Dinámicas (`updateTitleAnimation(isDark)`)**:
    - *¿Qué hace?* Alterna animaciones de la librería *Animate.css* sobre el título principal ("pulse" para el modo claro y la agresiva "hinge" para el modo oscuro).
