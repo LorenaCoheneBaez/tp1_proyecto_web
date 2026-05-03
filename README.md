@@ -103,7 +103,7 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
 
 6. **Animación Sorpresa**:
    - *¿Qué hace?* Controla el botón "¡Sorpresa!" en cada perfil. Al hacer clic, reemplaza temporalmente la información del perfil con un GIF animado temático (como el Mind Flayer, Vecna o el Demogorgon), alternando también el texto del botón para permitir cerrarlo.
-   - *Ubicación*: En las páginas individuales de los perfiles (`profile-robin.html`).
+   - *Ubicación*: En las páginas individuales de los perfiles `profile-*.html` (en este ejemplo `profile-robin.html`).
 
    📸 *Captura de la animación sorpresa:*
    <br>![Captura Sorpresa](img/screenshots/sorpresa_light.png)
