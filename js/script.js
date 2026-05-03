@@ -32,25 +32,53 @@ document.addEventListener("DOMContentLoaded", () => {
   applyTheme();
 });
 
+let darkAnimationTimeout;
+
+function darkLoop(title) {
+  clearTimeout(darkAnimationTimeout);
+
+  title.classList.remove("animate__hinge");
+  title.classList.add("animate__animated", "animate__flash", "animate__infinite");
+
+  darkAnimationTimeout = setTimeout(() => {
+    
+    title.classList.remove("animate__flash", "animate__infinite");
+
+    void title.offsetWidth;
+
+    title.classList.add("animate__animated", "animate__hinge");
+
+    darkAnimationTimeout = setTimeout(() => {
+      darkLoop(title);
+    }, 2000);
+
+  }, 3000);
+}
+
 function updateTitleAnimation(isDark) {
   const title = document.getElementById("main-title");
   if (!title) return;
 
-  // eliminar animaciones anteriores
+  clearTimeout(darkAnimationTimeout);
+
   title.classList.remove(
     "animate__animated",
     "animate__pulse",
-    "animate__hinge"
+    "animate__flash",
+    "animate__hinge",
+    "animate__infinite"
   );
 
-  // reiniciar animación
   void title.offsetWidth;
 
-  // aplicar según modo
   if (isDark) {
-    title.classList.add("animate__animated", "animate__hinge");
+    darkLoop(title);
   } else {
-    title.classList.add("animate__animated", "animate__pulse", "animate__infinite");
+    title.classList.add(
+      "animate__animated",
+      "animate__pulse",
+      "animate__infinite"
+    );
   }
 }
 
