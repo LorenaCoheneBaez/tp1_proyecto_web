@@ -122,8 +122,8 @@ const profiles = {
       dark: "Busca patrones ocultos en la oscuridad del código."
     },
     skills: {
-      light: "Bases de datos<br>Lógica<br>Debugging",
-      dark: "Rastreo de datos<br>Detección de patrones"
+      light: "Bases de datos relacionales<br>Lógica computacional<br>Debugging de código avanzado<br>Estructuración de APIs seguras",
+      dark: "Rastreo de datos corruptos<br>Detección de patrones anómalos<br>Filtrado de ruido digital<br>Extracción de información en el vacío"
     },
     surprise: "img/stranger-things-demogorgon.gif"
   },
@@ -146,8 +146,8 @@ const profiles = {
       dark: "Descifra códigos ocultos en el Upside Down."
     },
     skills: {
-      light: "Análisis<br>Lógica<br>Interpretación",
-      dark: "Decodificación<br>Pensamiento abstracto"
+      light: "Análisis estadístico avanzado<br>Lógica de sistemas<br>Interpretación de datos masivos<br>Visualización de la información",
+      dark: "Decodificación de señales entrópicas<br>Pensamiento abstracto extremo<br>Traducción de lenguajes del abismo<br>Identificación de brechas interdimensionales"
     },
     surprise: "img/giphy.gif"
   }
