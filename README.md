@@ -106,7 +106,8 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
    - *Ubicación*: En las páginas individuales de los perfiles (`profile-*.html`).
 
    📸 *Captura de la animación sorpresa:*
-   <br>![Captura Sorpresa](img/screenshots/sorpresa.png)
+   <br>![Captura Sorpresa](img/screenshots/sorpresa_light.png)
+   <br>![Captura Sorpresa](img/screenshots/sorpresa_dark.png)
 
 ---
 
