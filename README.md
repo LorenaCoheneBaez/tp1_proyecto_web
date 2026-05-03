@@ -108,9 +108,9 @@ El archivo [js/script.js](./js/script.js) maneja toda la interactividad de la p�
    <br>![Captura de Perfil Dinámico Dark](img/screenshots/profile_dark.png)
 
 
-6. **Animación Sorpresa**:
-   - *¿Qué hace?* Controla el botón "¡Sorpresa!" en cada perfil. Al hacer clic, reemplaza temporalmente la información del perfil con un GIF animado temático (como el Mind Flayer, Vecna o el Demogorgon), alternando también el texto del botón para permitir cerrarlo.
-   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en páginas individuales (ejemplo: [profile-robin.html](./profile-robin.html)).
+6. **Animación Sorpresa (Jump Scare)**:
+   - *¿Qué hace?* Controla el botón "¡Sorpresa!". Al hacer clic, ejecuta una animación CSS personalizada (`surpriseZoomScare`) donde un GIF temático aparece ocupando el 400% de la pantalla y se encoge suavemente hacia su contenedor. Bloquea temporalmente el scroll desde JS para evitar desbordes visuales.
+   - *Ubicación*: Lógica en [js/script.js](./js/script.js) y animación en [css/styles.css](./css/styles.css), aplicado en páginas individuales.
 
    📸 *Captura de la animación sorpresa:*
    <br>![Captura Sorpresa](img/screenshots/sorpresa_light.png)

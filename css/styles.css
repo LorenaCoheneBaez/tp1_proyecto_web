@@ -1016,27 +1016,3 @@ footer {
   color: #000000;
   box-shadow: 0 0 10px #FF0000;
 }
-
-/* Animación Sorpresa */
-@keyframes surpriseZoomScare {
-  0% {
-    transform: scale(4);
-    opacity: 0;
-  }
-  15% {
-    transform: scale(4);
-    opacity: 1;
-  }
-  40% {
-    transform: scale(4);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-.surprise-anim {
-  animation: surpriseZoomScare 1.5s ease-out forwards;
-}

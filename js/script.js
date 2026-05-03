@@ -310,19 +310,74 @@ btn.addEventListener("click", () => {
 
   if (!isShowingSurprise) {
     profileInfo.innerHTML = `
-      <div class="surprise-container">
-        <img class="surprise-anim" src="${surpriseImg}" alt="surprise" />
+      <div class="surprise-container" id="surprise-wrapper">
+        <img id="surprise-anim-img" src="${surpriseImg}" alt="surprise" style="opacity: 0;" />
       </div>
     `;
 
     btn.textContent = "Cerrar sorpresa";
     isShowingSurprise = true;
-    
-    // Evitar scrollbars molestos durante el zoom del 100%
     document.body.style.overflow = "hidden";
-    setTimeout(() => {
-      document.body.style.overflow = "";
-    }, 1500);
+
+    const animImg = document.getElementById("surprise-anim-img");
+    const wrapper = document.getElementById("surprise-wrapper");
+
+    const startAnimation = () => {
+      const finalRect = animImg.getBoundingClientRect();
+
+      // Crear un contenedor overlay a nivel de body para evitar problemas de z-index y backdrop-filter
+      const overlay = document.createElement("div");
+      overlay.style.position = "fixed";
+      overlay.style.top = "0";
+      overlay.style.left = "0";
+      overlay.style.width = "100vw";
+      overlay.style.height = "100vh";
+      overlay.style.zIndex = "999999";
+      overlay.style.backgroundColor = "rgba(0,0,0,0.95)";
+      overlay.style.transition = "background-color 0.8s ease";
+      
+      const flyingImg = document.createElement("img");
+      flyingImg.src = surpriseImg;
+      // Arranca ocupando toda la pantalla, centrada y sin deformarse
+      flyingImg.style.position = "absolute";
+      flyingImg.style.top = "0";
+      flyingImg.style.left = "0";
+      flyingImg.style.width = "100vw";
+      flyingImg.style.height = "100vh";
+      flyingImg.style.objectFit = "contain";
+      flyingImg.style.transition = "none";
+
+      overlay.appendChild(flyingImg);
+      document.body.appendChild(overlay);
+
+      // Forzar reflow
+      flyingImg.offsetHeight;
+
+      // Habilitar animación
+      flyingImg.style.transition = "all 0.8s cubic-bezier(0.25, 1, 0.5, 1)";
+      
+      // Mantener el susto 800ms y luego volar hacia la tarjeta
+      setTimeout(() => {
+        flyingImg.style.width = finalRect.width + "px";
+        flyingImg.style.height = finalRect.height + "px";
+        flyingImg.style.top = finalRect.top + "px";
+        flyingImg.style.left = finalRect.left + "px";
+        overlay.style.backgroundColor = "transparent";
+      }, 800);
+
+      // Limpiar y mostrar la imagen estática
+      setTimeout(() => {
+        animImg.style.opacity = "1";
+        overlay.remove();
+        document.body.style.overflow = "";
+      }, 1600);
+    };
+
+    if (animImg.complete) {
+      startAnimation();
+    } else {
+      animImg.onload = startAnimation;
+    }
 
   } else {
     profileInfo.innerHTML = originalContent;
