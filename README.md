@@ -86,7 +86,7 @@ El proyecto utiliza un enfoque *Desktop-First* (diseño primero para escritorio 
   - Las tarjetas (`.card`) pasan a ocupar el 90% del ancho de la pantalla móvil.
   - Reducción agresiva de tipografías (nombres de perfil, citas y descripciones) para evitar desbordes de texto.
   - Los botones interactivos (como el de "Volver" o "¡Sorpresa!") reducen su escala y reposicionan sus coordenadas absolutas para mantenerse siempre accesibles.
-  <br><video src="https://raw.githubusercontent.com/LorenaCoheneBaez/tp1_proyecto_web/main/img/screenshots/400px.mp4" controls width="100%"></video>
+  <br>![Gif Mobile 400px](img/screenshots/400px.gif)
 
 ---
 
