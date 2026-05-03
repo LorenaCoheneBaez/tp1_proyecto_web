@@ -3,6 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
   const isDark = savedTheme === "dark";
 
+  // Asegurar que el body coincida con el tema guardado sin importar el HTML estático
+  if (isDark) {
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+  } else {
+    document.body.classList.add("light");
+    document.body.classList.remove("dark");
+  }
+
   const loader = document.getElementById("loader");
   const loaderDark = document.getElementById("loader-dark");
 
