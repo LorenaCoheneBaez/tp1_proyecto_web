@@ -215,7 +215,7 @@ function updateProfile(isDark) {
   if (skills) skills.innerHTML = `${profile.skills[mode]}`;
 }
 
-/* Cambia imágenes de las tarjetas */
+/* Cambia imágenes y roles de las tarjetas */
 function updateCardImages(isDark) {
   const cardImages = document.querySelectorAll('.card-image img');
   cardImages.forEach(img => {
@@ -223,6 +223,15 @@ function updateCardImages(isDark) {
     const darkSrc = img.dataset.dark;
     if (lightSrc && darkSrc) {
       img.src = isDark ? darkSrc : lightSrc;
+    }
+  });
+
+  const cardRoles = document.querySelectorAll('.card-role');
+  cardRoles.forEach(role => {
+    const lightText = role.dataset.light;
+    const darkText = role.dataset.dark;
+    if (lightText && darkText) {
+      role.textContent = isDark ? darkText : lightText;
     }
   });
 }
