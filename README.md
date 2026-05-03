@@ -91,6 +91,10 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
    - *¿Qué hace?* Detecta qué modo está activo y muestra un cargador inicial ("Bienvenidos" vs "Bienvenido al infierno") que desaparece con un *fade out* luego de 1.2 segundos.
    - *Ubicación*: Funciona en base a los divs con id `loader` y `loader-dark`.
 
+6. **Animación Sorpresa**:
+   - *¿Qué hace?* Controla el botón "¡Sorpresa!" en cada perfil. Al hacer clic, reemplaza temporalmente la información del perfil con un GIF animado temático (como el Mind Flayer, Vecna o el Demogorgon), alternando también el texto del botón para permitir cerrarlo.
+   - *Ubicación*: En las páginas individuales de los perfiles (`profile-*.html`).
+
 ---
 
 ## 🚀 Enlace al Proyecto Desplegado

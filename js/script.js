@@ -149,7 +149,7 @@ const profiles = {
       light: "Análisis<br>Lógica<br>Interpretación",
       dark: "Decodificación<br>Pensamiento abstracto"
     },
-    surprise: "img/roar-stranger-things.gif"
+    surprise: "img/giphy.gif"
   }
 };
 
@@ -163,7 +163,7 @@ function applyTheme() {
 
   updateProfile(isDark);
   updateCardImages(isDark);
-  updateTitleAnimation(isDark); 
+  updateTitleAnimation(isDark);
 }
 
 /* Perfiles */
