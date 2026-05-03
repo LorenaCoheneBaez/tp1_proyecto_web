@@ -1,5 +1,7 @@
 # Strange Portafolio
 
+🔗 **Deploy:** *[Ingresa el enlace de Vercel aquí]*
+
 > *"Bienvenidos a nuestro pueblo. Descubre las habilidades de nuestros expertos."*
 
 Este es el primer trabajo práctico grupal, diseñado como un portafolio web interactivo inspirado en el universo de **Stranger Things**. 
@@ -79,6 +81,10 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
    - *¿Qué hace?* Cambia el contenido interno de la página de perfil (Imagen, Rol, Frase destacada, Descripción y Habilidades) dependiendo del modo activado, obteniendo los datos de un objeto `profiles`.
    - *Ubicación*: En cada `profile-*.html`.
 
+   📸 *Captura de ejemplo del modo oscuro y cambio de textos:*
+   <br>![Captura de Perfil Dinámico Light](img/screenshots/profile_light.png)
+   <br>![Captura de Perfil Dinámico Dark](img/screenshots/profile_dark.png)
+
 3. **Tarjetas de Portada (`updateCardImages(isDark)`)**:
    - *¿Qué hace?* Cambia las imágenes (avatar normal y su versión "corrompida") de las *cards* de presentación en la Home, leyendo los atributos `data-light` y `data-dark`.
    - *Ubicación*: `index.html`.
@@ -90,10 +96,16 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
 5. **Loader Temático**:
    - *¿Qué hace?* Detecta qué modo está activo y muestra un cargador inicial ("Bienvenidos" vs "Bienvenido al infierno") que desaparece con un *fade out* luego de 1.2 segundos.
    - *Ubicación*: Funciona en base a los divs con id `loader` y `loader-dark`.
+   
+   📸 *Captura del Loader inicial:*
+   <br>![Captura del Loader](img/screenshots/loader.png)
 
 6. **Animación Sorpresa**:
    - *¿Qué hace?* Controla el botón "¡Sorpresa!" en cada perfil. Al hacer clic, reemplaza temporalmente la información del perfil con un GIF animado temático (como el Mind Flayer, Vecna o el Demogorgon), alternando también el texto del botón para permitir cerrarlo.
    - *Ubicación*: En las páginas individuales de los perfiles (`profile-*.html`).
+
+   📸 *Captura de la animación sorpresa:*
+   <br>![Captura Sorpresa](img/screenshots/sorpresa.png)
 
 ---
 
