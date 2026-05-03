@@ -73,20 +73,20 @@ El proyecto utiliza un enfoque *Desktop-First* (diseño primero para escritorio 
 - **Escritorio y Laptops Pequeñas (`max-width: 1200px`)**:
   - Se optimiza el espaciado general. Las tarjetas de la grilla principal (`.card`) y del perfil (`.profile-card`) reducen levemente su tamaño para no colisionar.
   - El logo del encabezado se ajusta para ahorrar espacio vertical.
-  <br><video src="img/screenshots/1200px.mp4" controls width="100%"></video>
+  <br><video src="https://raw.githubusercontent.com/LorenaCoheneBaez/tp1_proyecto_web/main/img/screenshots/1200px.mp4" controls width="100%"></video>
 
 - **Tablets y Pantallas Medianas (`max-width: 900px`)**:
   - **Navegación**: La barra de enlaces superior se oculta y es reemplazada por un **Menú Hamburguesa** (interactivo vía JS). Al abrirlo, el menú se despliega verticalmente.
   - **Layout de Perfiles**: Las tarjetas de perfil (`.profile-card`), que originalmente dividían avatar e información en dos columnas, colapsan en **una sola columna vertical** (centrando imagen y texto).
   - La grilla principal (`.grid`) pasa a mostrarse en una sola columna para facilitar el scroll.
   - Se reducen los tamaños tipográficos de los títulos en la sección Bitácora.
-  <br><video src="img/screenshots/900px.mp4" controls width="100%"></video>
+  <br><video src="https://raw.githubusercontent.com/LorenaCoheneBaez/tp1_proyecto_web/main/img/screenshots/900px.mp4" controls width="100%"></video>
 
 - **Dispositivos Móviles Pequeños (`max-width: 400px`)**:
   - Las tarjetas (`.card`) pasan a ocupar el 90% del ancho de la pantalla móvil.
   - Reducción agresiva de tipografías (nombres de perfil, citas y descripciones) para evitar desbordes de texto.
   - Los botones interactivos (como el de "Volver" o "¡Sorpresa!") reducen su escala y reposicionan sus coordenadas absolutas para mantenerse siempre accesibles.
-  <br><video src="img/screenshots/400px.mp4" controls width="100%"></video>
+  <br><video src="https://raw.githubusercontent.com/LorenaCoheneBaez/tp1_proyecto_web/main/img/screenshots/400px.mp4" controls width="100%"></video>
 
 ---
 
