@@ -94,7 +94,7 @@ El archivo [js/script.js](./js/script.js) maneja toda la interactividad de la p�
    <br>![Captura de titulo](img/screenshots/tittle_dark.gif)
 
 4. **Tarjetas de Portada (`updateCardImages(isDark)`)**:
-   - *¿Qué hace?* Cambia las imágenes (avatar normal y su versión "corrompida") de las *cards* de presentación en la Home, leyendo los atributos `data-light` y `data-dark`.
+   - *¿Qué hace?* Cambia las imágenes (avatar normal a versión "corrompida") y los **textos de los roles** (ej: Front-end Developer a Reality Breaker) en las *cards* de presentación de la Home, leyendo los atributos `data-light` y `data-dark`.
    - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en [index.html](./index.html).
    <br>![Captura de Tarjetas Dinámicas Light](img/screenshots/cards_light.png)
    <br>![Captura de Tarjetas Dinámicas Dark](img/screenshots/cards_dark.png)
