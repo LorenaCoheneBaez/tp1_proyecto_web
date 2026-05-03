@@ -23,48 +23,33 @@ document.addEventListener("DOMContentLoaded", () => {
       setTimeout(() => {
         activeLoader.style.display = "none";
         document.body.classList.remove("loading");
-
-        // Ejecutar animación con un pequeño retraso extra para que el ojo se fije en el título
-        setTimeout(() => {
-          const isDarkNow = document.body.classList.contains("dark");
-          updateTitleAnimation(isDarkNow);
-        }, 500);
       }, 600);
     } else {
       document.body.classList.remove("loading");
-      setTimeout(() => {
-        const isDarkNow = document.body.classList.contains("dark");
-        updateTitleAnimation(isDarkNow);
-      }, 500);
     }
   }, 1200);
 
-  applyTheme(true);
+  applyTheme();
 });
 
 function updateTitleAnimation(isDark) {
   const title = document.getElementById("main-title");
   if (!title) return;
 
-  // eliminar todas las posibles clases de animación anteriores
+  // eliminar animaciones anteriores
   title.classList.remove(
     "animate__animated",
     "animate__pulse",
-    "animate__hinge",
-    "animate__flash",
-    "animate__infinite",
-    "flicker-animation"
+    "animate__hinge"
   );
 
-  // reiniciar el flujo para que la animación vuelva a empezar
+  // reiniciar animación
   void title.offsetWidth;
 
   // aplicar según modo
   if (isDark) {
-    // Usamos nuestra animación personalizada de parpadeo para el modo oscuro
-    title.classList.add("flicker-animation");
+    title.classList.add("animate__animated", "animate__hinge");
   } else {
-    // En modo claro usamos 'pulse' infinito de Animate.css
     title.classList.add("animate__animated", "animate__pulse", "animate__infinite");
   }
 }
@@ -169,16 +154,13 @@ const profiles = {
 };
 
 /* Tema */
-function applyTheme(skipAnimation = false) {
+function applyTheme() {
   const savedTheme = localStorage.getItem("theme");
   const isDark = savedTheme === "dark";
 
-  document.body.classList.remove("light", "dark");
-  document.body.classList.add(isDark ? "dark" : "light");
-
   updateProfile(isDark);
   updateCardImages(isDark);
-  if (!skipAnimation) updateTitleAnimation(isDark);
+  updateTitleAnimation(isDark);
 }
 
 /* Perfiles */
