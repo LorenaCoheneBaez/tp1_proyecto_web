@@ -71,17 +71,17 @@ El sitio incluye funcionalidades dinámicas como un cargador inicial (loader) te
 
 ## ⚡ JavaScript: Funcionalidades Dinámicas
 
-El archivo `js/script.js` maneja toda la interactividad de la página, principalmente enfocada en la transición entre dimensiones:
+El archivo [js/script.js](./js/script.js) maneja toda la interactividad de la página, principalmente enfocada en la transición entre dimensiones:
 
 1. **Gestor de Tema (`applyTheme` y EventListener en el botón de toggle)**:
    - *¿Qué hace?* Alterna la clase `light` o `dark` en el `body` de las páginas y lo guarda en `localStorage` para recordar la elección del usuario en toda su navegación.
-   - *Ubicación*: Se ejecuta en todas las páginas, ubicado en la parte superior derecha de la pantalla (Portadas y Perfiles).
+   - *Ubicación*: Se ejecuta a nivel global a través de [js/script.js](./js/script.js), aplicado a todas las páginas.
    <br>![Captura del toggle en modo light](img/screenshots/toggle_light.png)
    <br>![Captura del toggle en modo dark](img/screenshots/toggle_dark.png)
 
 2. **Loader Temático**:
    - *¿Qué hace?* Detecta qué modo está activo y muestra un cargador inicial ("Bienvenidos" vs "Bienvenido al infierno") que desaparece con un *fade out* luego de 1.2 segundos.
-   - *Ubicación*: Funciona en base a los divs con id `loader` y `loader-dark`.
+   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en todos los archivos HTML (divs con id `loader` y `loader-dark`).
 
    📸 *Captura del Loader inicial:*
    <br>![Captura del Loader light](img/screenshots/loader_light.png)
@@ -89,19 +89,19 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
 
 3. **Animaciones Dinámicas (`updateTitleAnimation(isDark)`)**:
    - *¿Qué hace?* Alterna animaciones de la librería *Animate.css* sobre el título principal ("pulse" para el modo claro y la agresiva "hinge" para el modo oscuro).
-   - *Ubicación*: `index.html`.
+   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en [index.html](./index.html).
    <br>![Captura de titulo](img/screenshots/tittle_light.gif)
    <br>![Captura de titulo](img/screenshots/tittle_dark.gif)
 
 4. **Tarjetas de Portada (`updateCardImages(isDark)`)**:
    - *¿Qué hace?* Cambia las imágenes (avatar normal y su versión "corrompida") de las *cards* de presentación en la Home, leyendo los atributos `data-light` y `data-dark`.
-   - *Ubicación*: `index.html`.
+   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en [index.html](./index.html).
    <br>![Captura de Tarjetas Dinámicas Light](img/screenshots/cards_light.png)
    <br>![Captura de Tarjetas Dinámicas Dark](img/screenshots/cards_dark.png)
 
 5. **Perfiles Dinámicos (`updateProfile(isDark)`)**:
    - *¿Qué hace?* Cambia el contenido interno de la página de perfil (Imagen, Rol, Frase destacada, Descripción y Habilidades) dependiendo del modo activado, obteniendo los datos de un objeto `profiles`.
-   - *Ubicación*: En cada `profile-*.html`.
+   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en [profile-max.html](./profile-max.html), [profile-nancy.html](./profile-nancy.html), [profile-robin.html](./profile-robin.html) y [profile-steve.html](./profile-steve.html).
 
    📸 *Captura de ejemplo del modo light - dark y cambio de textos:*
    <br>![Captura de Perfil Dinámico Light](img/screenshots/profile_light.png)
@@ -110,7 +110,7 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
 
 6. **Animación Sorpresa**:
    - *¿Qué hace?* Controla el botón "¡Sorpresa!" en cada perfil. Al hacer clic, reemplaza temporalmente la información del perfil con un GIF animado temático (como el Mind Flayer, Vecna o el Demogorgon), alternando también el texto del botón para permitir cerrarlo.
-   - *Ubicación*: En las páginas individuales de los perfiles `profile-*.html` (en este ejemplo `profile-robin.html`).
+   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en páginas individuales (ejemplo: [profile-robin.html](./profile-robin.html)).
 
    📸 *Captura de la animación sorpresa:*
    <br>![Captura Sorpresa](img/screenshots/sorpresa_light.png)
