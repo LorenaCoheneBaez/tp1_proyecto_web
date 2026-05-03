@@ -42,7 +42,7 @@ body.light #loader {
   background: url('../img/loading_light.png') center/cover no-repeat;
 }
 
-body.dark #loader {
+body.dark #loader-dark {
   background: url('../img/loading_dark.png') center/cover no-repeat;
 }
 
