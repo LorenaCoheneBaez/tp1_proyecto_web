@@ -79,13 +79,13 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
    <br>![Captura del toggle en modo light](img/screenshots/toggle_light.png)
    <br>![Captura del toggle en modo dark](img/screenshots/toggle_dark.png)
 
-2. **Perfiles Dinámicos (`updateProfile(isDark)`)**:
-   - *¿Qué hace?* Cambia el contenido interno de la página de perfil (Imagen, Rol, Frase destacada, Descripción y Habilidades) dependiendo del modo activado, obteniendo los datos de un objeto `profiles`.
-   - *Ubicación*: En cada `profile-*.html`.
+2. **Loader Temático**:
+   - *¿Qué hace?* Detecta qué modo está activo y muestra un cargador inicial ("Bienvenidos" vs "Bienvenido al infierno") que desaparece con un *fade out* luego de 1.2 segundos.
+   - *Ubicación*: Funciona en base a los divs con id `loader` y `loader-dark`.
 
-   📸 *Captura de ejemplo del modo light - dark y cambio de textos:*
-   <br>![Captura de Perfil Dinámico Light](img/screenshots/profile_light.png)
-   <br>![Captura de Perfil Dinámico Dark](img/screenshots/profile_dark.png)
+   📸 *Captura del Loader inicial:*
+   <br>![Captura del Loader light](img/screenshots/loader_light.png)
+   <br>![Captura del Loader dark](img/screenshots/loader_dark.png)
 
 3. **Tarjetas de Portada (`updateCardImages(isDark)`)**:
    - *¿Qué hace?* Cambia las imágenes (avatar normal y su versión "corrompida") de las *cards* de presentación en la Home, leyendo los atributos `data-light` y `data-dark`.
@@ -93,17 +93,19 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
    <br>![Captura de Tarjetas Dinámicas Light](img/screenshots/cards_light.png)
    <br>![Captura de Tarjetas Dinámicas Dark](img/screenshots/cards_dark.png)
 
-4. **Animaciones Dinámicas (`updateTitleAnimation(isDark)`)**:
+4. **Perfiles Dinámicos (`updateProfile(isDark)`)**:
+   - *¿Qué hace?* Cambia el contenido interno de la página de perfil (Imagen, Rol, Frase destacada, Descripción y Habilidades) dependiendo del modo activado, obteniendo los datos de un objeto `profiles`.
+   - *Ubicación*: En cada `profile-*.html`.
+
+   📸 *Captura de ejemplo del modo light - dark y cambio de textos:*
+   <br>![Captura de Perfil Dinámico Light](img/screenshots/profile_light.png)
+   <br>![Captura de Perfil Dinámico Dark](img/screenshots/profile_dark.png)
+
+
+5. **Animaciones Dinámicas (`updateTitleAnimation(isDark)`)**:
    - *¿Qué hace?* Alterna animaciones de la librería *Animate.css* sobre el título principal ("pulse" para el modo claro y la agresiva "hinge" para el modo oscuro).
    - *Ubicación*: `index.html`.
 
-5. **Loader Temático**:
-   - *¿Qué hace?* Detecta qué modo está activo y muestra un cargador inicial ("Bienvenidos" vs "Bienvenido al infierno") que desaparece con un *fade out* luego de 1.2 segundos.
-   - *Ubicación*: Funciona en base a los divs con id `loader` y `loader-dark`.
-
-   📸 *Captura del Loader inicial:*
-   <br>![Captura del Loader light](img/screenshots/loader_light.png)
-   <br>![Captura del Loader dark](img/screenshots/loader_dark.png)
 
 6. **Animación Sorpresa**:
    - *¿Qué hace?* Controla el botón "¡Sorpresa!" en cada perfil. Al hacer clic, reemplaza temporalmente la información del perfil con un GIF animado temático (como el Mind Flayer, Vecna o el Demogorgon), alternando también el texto del botón para permitir cerrarlo.
