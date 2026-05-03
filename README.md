@@ -11,10 +11,10 @@ El sitio incluye funcionalidades dinámicas como un cargador inicial (loader) te
 
 ## 👥 Integrantes
 
-- **Lorena Cohene Baez** - *Back-end Developer / Data Hunter* - [![GitHub](img/github.png)](https://github.com/LorenaCoheneBaez)
-- **Gisela Colmeiro (Gisse)** - *Front-end Developer / Reality Breaker* - [![GitHub](img/github.png)](https://github.com/gissestephy)
-- **Cristian Vivar** - *QA Tester / Monster Hunter* - [![GitHub](img/github.png)](https://github.com/ecvivar)
-- **Cristina Murguía** - *Data Analyst / Code Breaker* - [![GitHub](img/github.png)](https://github.com/crismurbaez)
+- **Lorena Cohene Baez** - *Back-end Developer / Data Hunter* - <a href="https://github.com/LorenaCoheneBaez" target="_blank"><img src="img/github.png" alt="GitHub" width="22" style="vertical-align: middle;"></a>
+- **Gisela Colmeiro (Gisse)** - *Front-end Developer / Reality Breaker* - <a href="https://github.com/gissestephy" target="_blank"><img src="img/github.png" alt="GitHub" width="22" style="vertical-align: middle;"></a>
+- **Cristian Vivar** - *QA Tester / Monster Hunter* - <a href="https://github.com/ecvivar" target="_blank"><img src="img/github.png" alt="GitHub" width="22" style="vertical-align: middle;"></a>
+- **Cristina Murguía** - *Data Analyst / Code Breaker* - <a href="https://github.com/crismurbaez" target="_blank"><img src="img/github.png" alt="GitHub" width="22" style="vertical-align: middle;"></a>
 
 ---
 
