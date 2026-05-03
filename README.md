@@ -118,7 +118,7 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
 
 ## 🚀 Enlace al Proyecto Desplegado
 
-- **Vercel**: *[Ingresa el enlace de Vercel aquí]*
+- **Vercel**: (https://tp1-proyecto-web.vercel.app/index.html)
 
 > **NOTA PARA SIGUIENTES ENTREGAS:** Este archivo `README.md` se irá actualizando en los próximos TPs para incorporar nuevas mejoras y capturas del progreso de la app.
 
