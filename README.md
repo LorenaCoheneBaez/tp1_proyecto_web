@@ -108,9 +108,9 @@ El archivo [js/script.js](./js/script.js) maneja toda la interactividad de la p�
    <br>![Captura de Perfil Dinámico Dark](img/screenshots/profile_dark.png)
 
 
-6. **Animación Sorpresa (Jump Scare)**:
-   - *¿Qué hace?* Controla el botón "¡Sorpresa!". Al hacer clic, ejecuta una animación CSS personalizada (`surpriseZoomScare`) donde un GIF temático aparece ocupando el 400% de la pantalla y se encoge suavemente hacia su contenedor. Bloquea temporalmente el scroll desde JS para evitar desbordes visuales.
-   - *Ubicación*: Lógica en [js/script.js](./js/script.js) y animación en [css/styles.css](./css/styles.css), aplicado en páginas individuales.
+6. **Animación Sorpresa (Jump Scare - FLIP)**:
+   - *¿Qué hace?* Controla el botón "¡Sorpresa!". Al hacer clic, utiliza la técnica **FLIP** mediante JavaScript para inyectar un GIF temático que ocupa exactamente el 100% de la pantalla (100vw/100vh) sin deformarse. Luego, calcula matemáticamente las coordenadas de la tarjeta y hace que la imagen "vuele" hacia su posición final, respetando todas las Media Queries.
+   - *Ubicación*: Lógica de animación calculada íntegramente en [js/script.js](./js/script.js), aplicado en páginas individuales.
 
    📸 *Captura de la animación sorpresa:*
    <br>![Captura Sorpresa](img/screenshots/sorpresa_light.png)

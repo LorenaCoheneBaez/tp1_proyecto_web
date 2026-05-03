@@ -384,5 +384,9 @@ btn.addEventListener("click", () => {
 
     btn.textContent = "¡Sorpresa!";
     isShowingSurprise = false;
+
+    // Restaurar los datos dinámicos que se perdieron al reescribir el HTML
+    const isDark = document.body.classList.contains("dark");
+    updateProfile(isDark);
   }
 });
