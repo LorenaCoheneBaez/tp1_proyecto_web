@@ -95,7 +95,7 @@ El archivo `js/script.js` maneja toda la interactividad de la página, principal
 
 5. **Loader Temático**:
    - *¿Qué hace?* Detecta qué modo está activo y muestra un cargador inicial ("Bienvenidos" vs "Bienvenido al infierno") que desaparece con un *fade out* luego de 1.2 segundos.
-   - *Ubicación*: Funciona en base a los divs con id `loader-light` y `loader-dark`.
+   - *Ubicación*: Funciona en base a los divs con id `loader` y `loader-dark`.
 
    📸 *Captura del Loader inicial:*
    <br>![Captura del Loader light](img/screenshots/loader_light.png)
