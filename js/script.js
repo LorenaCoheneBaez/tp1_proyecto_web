@@ -301,10 +301,11 @@ function getCurrentProfile() {
 const btn = document.getElementById("surprise-btn-id");
 const profileInfo = document.querySelector(".profile-info");
 
-let isShowingSurprise = false;
-const originalContent = profileInfo.innerHTML;
+if (profileInfo && btn && profileImg) {
+  let isShowingSurprise = false;
+  const originalContent = profileInfo.innerHTML;
 
-btn.addEventListener("click", () => {
+  btn.addEventListener("click", () => {
   const currentProfile = getCurrentProfile();
   const surpriseImg = profiles[currentProfile].surprise;
 
@@ -389,4 +390,5 @@ btn.addEventListener("click", () => {
     const isDark = document.body.classList.contains("dark");
     updateProfile(isDark);
   }
-});
+  });
+}
