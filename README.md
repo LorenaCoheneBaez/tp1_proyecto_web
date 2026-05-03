@@ -113,8 +113,8 @@ El archivo [js/script.js](./js/script.js) maneja toda la interactividad de la p�
    - *Ubicación*: Lógica de animación calculada íntegramente en [js/script.js](./js/script.js), aplicado en páginas individuales.
 
    📸 *Captura de la animación sorpresa:*
-   <br>![Captura Sorpresa](img/screenshots/sorpresa_light.png)
-   <br>![Captura Sorpresa](img/screenshots/sorpresa_dark.png)
+   <br>![Captura Sorpresa](img/screenshots/sorpresa_light.gif)
+   <br>![Captura Sorpresa](img/screenshots/sorpresa_dark.gif)
 
 ---
 
