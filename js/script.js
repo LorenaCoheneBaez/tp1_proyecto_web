@@ -311,12 +311,19 @@ btn.addEventListener("click", () => {
   if (!isShowingSurprise) {
     profileInfo.innerHTML = `
       <div class="surprise-container">
-        <img src="${surpriseImg}" alt="surprise" />
+        <img class="surprise-anim" src="${surpriseImg}" alt="surprise" />
       </div>
     `;
 
     btn.textContent = "Cerrar sorpresa";
     isShowingSurprise = true;
+    
+    // Evitar scrollbars molestos durante el zoom del 100%
+    document.body.style.overflow = "hidden";
+    setTimeout(() => {
+      document.body.style.overflow = "";
+    }, 1500);
+
   } else {
     profileInfo.innerHTML = originalContent;
 
