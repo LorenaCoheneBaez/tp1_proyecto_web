@@ -111,8 +111,8 @@ El archivo [js/script.js](./js/script.js) gestiona la interactividad del sitio. 
 
   *Captura del toggle en modo light y dark:*
    <div align="center">
-     <img src="img/screenshots/toggle_light.png" alt="Captura del toggle en modo light" width="45%">
-     <img src="img/screenshots/toggle_dark.png" alt="Captura del toggle en modo dark" width="45%">
+     <img src="img/screenshots/btn_up.png" alt="Captura del toggle en modo light" width="45%">
+     <img src="img/screenshots/btn_down.png" alt="Captura del toggle en modo dark" width="45%">
    </div>
 
 2. **Loader Temático**:
