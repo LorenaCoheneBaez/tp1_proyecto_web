@@ -37,7 +37,7 @@ El sitio incluye funcionalidades dinámicas como un cargador inicial (loader) te
 /
 ├── index.html           # Página principal (Portada y presentación)
 ├── bitacora.html        # Página de bitácora
-├── profile-*.html       # Páginas individuales de perfiles (Max, Nancy, Robin, Steve)
+├── profile-*.html       # Páginas individuales de perfiles
 ├── css/
 │   ├── styles.css       # Hoja de estilos principal del sitio
 │   └── font/            # Tipografías locales (Bolton.ttf)
@@ -45,6 +45,15 @@ El sitio incluye funcionalidades dinámicas como un cargador inicial (loader) te
 │   └── script.js        # Lógica de interactividad, cambio de modo y datos dinámicos
 └── img/                 # Avatares, logos, iconos y fondos adaptados a cada dimensión
 ```
+
+### 📝 Sección Bitácora
+El proyecto incluye una página dedicada ([bitacora.html](./bitacora.html)) donde se documenta el proceso de desarrollo, cumpliendo con los requerimientos del TP1:
+- **Planeación y Diseño**: Proceso de elección de la temática y asignación de personajes/roles.
+- **Dificultades**: Resolución de problemas con la organización de datos dinámicos y carga de fuentes externas.
+- **Cambios**: Ajustes realizados en la lógica de temas y optimización de componentes durante la implementación.
+
+*Gif de la Bitácora*
+<br>![Gif de Bitácora](img/screenshots/bitacora.gif)
 
 ---
 
@@ -92,56 +101,59 @@ El proyecto utiliza un enfoque *Desktop-First* (diseño primero para escritorio 
 
 ## ⚡ JavaScript: Funcionalidades Dinámicas
 
-El archivo [js/script.js](./js/script.js) maneja toda la interactividad de la página, principalmente enfocada en la transición entre dimensiones:
+El archivo [js/script.js](./js/script.js) gestiona la interactividad del sitio. Para facilitar la corrección, se dividen las funciones según su alcance:
 
-1. **Gestor de Tema (`applyTheme` y EventListener en el botón de toggle)**:
-   - *¿Qué hace?* Alterna la clase `light` o `dark` en el `body` de las páginas y lo guarda en `localStorage` para recordar la elección del usuario en toda su navegación.
-   - *Ubicación*: Se ejecuta a nivel global a través de [js/script.js](./js/script.js), aplicado a todas las páginas y se ubica en la esquina superior derecha.
+### 🌍 Global (Todas las páginas)
 
-   📸 *Captura del toggle en modo light y dark:*
-   <br>![Captura del toggle en modo light](img/btn_up.png)
-   <br>![Captura del toggle en modo dark](img/btn_down.png)
+1. **Gestor de Tema (`applyTheme` y botón de toggle)**:
+   - *¿Qué hace?* Alterna la clase `light` o `dark` en el `body` y lo persiste en `localStorage`.
+   - *Ubicación*: Esquina superior derecha de todas las páginas.
+
+  *Captura del toggle en modo light y dark:*
+   ![Captura del toggle en modo light](img/btn_up.png) ![Captura del toggle en modo dark](img/btn_down.png)
 
 2. **Loader Temático**:
-   - *¿Qué hace?* Detecta qué modo está activo y muestra un cargador inicial ("Bienvenidos" vs "Bienvenido al infierno") que desaparece con un *fade out* luego de 1.2 segundos.
-   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en todos los archivos HTML (divs con id `loader` y `loader-dark`).
+   - *¿Qué hace?* Muestra un cargador inicial adaptado al modo activo ("Bienvenidos" vs "Bienvenido al infierno") con un efecto *fade out* luego de 1.2 segundos.
 
-   📸 *Captura del Loader inicial:*
-   <br>![Captura del Loader light](img/screenshots/loader_light.png)
-   <br>![Captura del Loader dark](img/screenshots/loader_dark.png)
+  *Captura del Loader: en modo light y dark:*
+   ![Captura del Loader light](img/screenshots/loader_light.png) ![Captura del Loader dark](img/screenshots/loader_dark.png)
 
-3. **Animaciones Dinámicas (`updateTitleAnimation(isDark)`)**:
-   - *¿Qué hace?* Alterna animaciones de la librería *Animate.css* sobre el título principal ("pulse" para el modo claro y la agresiva "hinge" para el modo oscuro).
-   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en [index.html](./index.html).
+3. **Menú Hamburguesa (Interactividad Responsiva)**:
+   - *¿Qué hace?* Gestiona la apertura y cierre del menú de navegación en dispositivos móviles (tablets y celulares).
+   - *Ubicación*: Header de todas las páginas (visible en `< 900px`).
 
-   📸 *Gifs de Tittle:*
-   <br>![Gif de Tittle light](img/screenshots/tittle_light.gif)
-   <br>![Gif de Tittle dark](img/screenshots/tittle_dark.gif)
+*Gif del Menú Hamburguesa:*
 
-4. **Tarjetas de Portada (`updateCardImages(isDark)`)**:
-   - *¿Qué hace?* Cambia las imágenes (avatar normal a versión "corrompida") y los **textos de los roles** (ej: Front-end Developer a Reality Breaker) en las *cards* de presentación de la Home, leyendo los atributos `data-light` y `data-dark`.
-   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en [index.html](./index.html).
+![Gif de Menú Hamburguesa](img/screenshots/menu_hamburguesa.gif)
+
+### 🏠 Portada (index.html)
+
+4. **Animaciones Dinámicas del Título (`updateTitleAnimation`)**:
+   - *¿Qué hace?* Alterna entre un "pulse" suave y una animación de "bisagra" (hinge) agresiva según el modo.
+
+   Gif del título en modo light y dark:
+   ![Gif de Tittle light](img/screenshots/tittle_light.gif) ![Gif de Tittle dark](img/screenshots/tittle_dark.gif)
+
+5. **Tarjetas de Presentación (`updateCardImages`)**:
+   - *¿Qué hace?* Cambia imágenes de perfil y textos de roles (ej: "QA Tester" a "Monster Hunter") dinámicamente.
+
+   *Captura de Tarjetas Dinámicas: en modo light y dark:*
+   ![Captura de Tarjetas Dinámicas Light](img/screenshots/cards_light.png) ![Captura de Tarjetas Dinámicas Dark](img/screenshots/cards_dark.png)
+
+### 👤 Páginas Individuales (profile-*.html)
+
+6. **Perfiles Dinámicos (`updateProfile`)**:
+   - *¿Qué hace?* Actualiza todo el contenido de la tarjeta de presentación (Imagen, Rol, Frase, Descripción y Habilidades) desde un objeto central de datos.
+   - **Estructura Obligatoria**: Cada tarjeta incluye Foto, Nombre, Ubicación, Edad, Habilidades (mín. 4), Películas (mín. 3) y Discos (mín. 3).
+
+   *Captura del Perfil Dinámico en modo light y dark:*
+   ![Captura de Perfil Dinámico Light](img/screenshots/profile_light.png) ![Captura de Perfil Dinámico Dark](img/screenshots/profile_dark.png)
+
+7. **Animación Sorpresa (Técnica FLIP)**:
+   - *¿Qué hace?* Activa un "Jump Scare" temático que ocupa la pantalla completa y luego vuela hacia su posición en la tarjeta usando cálculos matemáticos de coordenadas.
    
-   📸 *Captura de Tarjetas Dinámicas:* 
-   <br>![Captura de Tarjetas Dinámicas Light](img/screenshots/cards_light.png)
-   <br>![Captura de Tarjetas Dinámicas Dark](img/screenshots/cards_dark.png)
-
-5. **Perfiles Dinámicos (`updateProfile(isDark)`)**:
-   - *¿Qué hace?* Cambia el contenido interno de la página de perfil (Imagen, Rol, Frase destacada, Descripción y Habilidades) dependiendo del modo activado, obteniendo los datos de un objeto `profiles`.
-   - *Ubicación*: Lógica en [js/script.js](./js/script.js), aplicado en [profile-max.html](./profile-max.html), [profile-nancy.html](./profile-nancy.html), [profile-robin.html](./profile-robin.html) y [profile-steve.html](./profile-steve.html).
-
-   📸 *Captura de ejemplo del modo light - dark y cambio de textos:*
-   <br>![Captura de Perfil Dinámico Light](img/screenshots/profile_light.png)
-   <br>![Captura de Perfil Dinámico Dark](img/screenshots/profile_dark.png)
-
-
-6. **Animación Sorpresa (Jump Scare - FLIP)**:
-   - *¿Qué hace?* Controla el botón "¡Sorpresa!". Al hacer clic, utiliza la técnica **FLIP** mediante JavaScript para inyectar un GIF temático que ocupa exactamente el 100% de la pantalla (100vw/100vh) sin deformarse. Luego, calcula matemáticamente las coordenadas de la tarjeta y hace que la imagen "vuele" hacia su posición final, respetando todas las Media Queries.
-   - *Ubicación*: Lógica de animación calculada íntegramente en [js/script.js](./js/script.js), aplicado en páginas individuales.
-
-   📸 *Gifs de la animación sorpresa:*
-   <br>![Gif de Sorpresa light](img/screenshots/sorpresa_light.gif)
-   <br>![Gif de Sorpresa dark](img/screenshots/sorpresa_dark.gif)
+   *Gif de Sorpresa en modo light y dark:*
+   ![Gif de Sorpresa light](img/screenshots/sorpresa_light.gif) ![Gif de Sorpresa dark](img/screenshots/sorpresa_dark.gif)
 
 ---
 

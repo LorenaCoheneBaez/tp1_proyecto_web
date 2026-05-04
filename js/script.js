@@ -111,7 +111,7 @@ const profiles = {
       dark: "Carismático y resiliente, enfrenta fallas ocultas y detecta Demobugs antes de que emerjan, protegiendo la estabilidad del entorno y evitando que el caos se propague."
     },
     skills: {
-      light: "Observación detallada de sistemas y flujos<br>Detección y análisis de vulnerabilidades<br>Reacción rápida ante errores críticos<br>Validación de seguridad y calidad del softwar",
+      light: "Observación detallada de sistemas y flujos<br>Detección y análisis de vulnerabilidades<br>Reacción rápida ante errores críticos<br>Validación de seguridad y calidad del software",
       dark: "Instinto de supervivencia ante errores críticos<br>Detección de anomalías ocultas<br>Trabajo en equipo bajo presión extrema<br>Reacción inmediata ante amenazas del sistema"
     },
     surprise: "img/mind-flayer-stranger-things.gif"
