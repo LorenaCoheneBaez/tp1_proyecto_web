@@ -13,10 +13,12 @@ El sitio incluye funcionalidades dinámicas como un cargador inicial (loader) te
 
 ## 👥 Integrantes
 
-- **Lorena Cohene Baez** - <a href="https://github.com/LorenaCoheneBaez" target="_blank"><img src="img/github.png" alt="GitHub" width="60" style="vertical-align: middle;"></a>
-- **Gisela Colmeiro (Gisse)** - <a href="https://github.com/gissestephy" target="_blank"><img src="img/github.png" alt="GitHub" width="60" style="vertical-align: middle;"></a>
-- **Cristian Vivar** - <a href="https://github.com/ecvivar" target="_blank"><img src="img/github.png" alt="GitHub" width="60" style="vertical-align: middle;"></a>
-- **Cristina Murguía** - <a href="https://github.com/crismurbaez" target="_blank"><img src="img/github.png" alt="GitHub" width="60" style="vertical-align: middle;"></a>
+| Integrante | GitHub |
+| :--- | :---: |
+| **Lorena Cohene Baez** | <a href="https://github.com/LorenaCoheneBaez" target="_blank"><img src="img/github.png" alt="GitHub" width="60"></a> |
+| **Gisela Colmeiro (Gisse)** | <a href="https://github.com/gissestephy" target="_blank"><img src="img/github.png" alt="GitHub" width="60"></a> |
+| **Cristian Vivar** | <a href="https://github.com/ecvivar" target="_blank"><img src="img/github.png" alt="GitHub" width="60"></a> |
+| **Cristina Murguía** | <a href="https://github.com/crismurbaez" target="_blank"><img src="img/github.png" alt="GitHub" width="60"></a> |
 
 ---
 
