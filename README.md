@@ -119,6 +119,7 @@ El archivo [js/script.js](./js/script.js) gestiona la interactividad del sitio. 
 
 2. **Loader Temático**:
    - *¿Qué hace?* Muestra un cargador inicial adaptado al modo activo ("Bienvenidos" vs "Bienvenido al infierno") con un efecto *fade out* luego de 1.2 segundos.
+   - *Ubicación*: Se visualiza al cargar cualquier página (contenedores `#loader` y `#loader-dark` en todos los HTML).
 
   *Captura del Loader: en modo light y dark:*
    ![Captura del Loader light](img/screenshots/loader_light.png) ![Captura del Loader dark](img/screenshots/loader_dark.png)
@@ -135,12 +136,14 @@ El archivo [js/script.js](./js/script.js) gestiona la interactividad del sitio. 
 
 4. **Animaciones Dinámicas del Título (`updateTitleAnimation`)**:
    - *¿Qué hace?* Alterna entre un "pulse" suave y una animación de "bisagra" (hinge) agresiva según el modo.
+   - *Ubicación*: Hero section (título principal) de [index.html](./index.html).
 
    Gif del título en modo light y dark:
    ![Gif de Tittle light](img/screenshots/tittle_light.gif) ![Gif de Tittle dark](img/screenshots/tittle_dark.gif)
 
 5. **Tarjetas de Presentación (`updateCardImages`)**:
    - *¿Qué hace?* Cambia imágenes de perfil y textos de roles (ej: "QA Tester" a "Monster Hunter") dinámicamente.
+   - *Ubicación*: Grilla de integrantes en la sección principal de [index.html](./index.html).
 
    *Captura de Tarjetas Dinámicas: en modo light y dark:*
    ![Captura de Tarjetas Dinámicas Light](img/screenshots/cards_light.png) ![Captura de Tarjetas Dinámicas Dark](img/screenshots/cards_dark.png)
@@ -149,6 +152,7 @@ El archivo [js/script.js](./js/script.js) gestiona la interactividad del sitio. 
 
 6. **Perfiles Dinámicos (`updateProfile`)**:
    - *¿Qué hace?* Actualiza todo el contenido de la tarjeta de presentación (Imagen, Rol, Frase, Descripción y Habilidades) desde un objeto central de datos.
+   - *Ubicación*: Páginas individuales de perfiles (`profile-*.html`).
    - **Estructura Obligatoria**: Cada tarjeta incluye Foto, Nombre, Ubicación, Edad, Habilidades (mín. 4), Películas (mín. 3) y Discos (mín. 3).
 
    *Captura del Perfil Dinámico en modo light y dark:*
@@ -156,6 +160,7 @@ El archivo [js/script.js](./js/script.js) gestiona la interactividad del sitio. 
 
 7. **Animación Sorpresa (Técnica FLIP)**:
    - *¿Qué hace?* Activa un "Jump Scare" temático que ocupa la pantalla completa y luego vuela hacia su posición en la tarjeta usando cálculos matemáticos de coordenadas.
+   - *Ubicación*: Botón "¡Sorpresa!" en la tarjeta de cada perfil individual.
    
    *Gif de Sorpresa en modo light y dark:*
    ![Gif de Sorpresa light](img/screenshots/sorpresa_light.gif) ![Gif de Sorpresa dark](img/screenshots/sorpresa_dark.gif)
