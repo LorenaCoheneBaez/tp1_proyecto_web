@@ -110,7 +110,10 @@ El archivo [js/script.js](./js/script.js) gestiona la interactividad del sitio. 
    - *Ubicación*: Esquina superior derecha de todas las páginas.
 
   *Captura del toggle en modo light y dark:*
-   ![Captura del toggle en modo light](img/btn_up.png) ![Captura del toggle en modo dark](img/btn_down.png)
+   <div align="center">
+     <img src="img/screenshots/toggle_light.png" alt="Captura del toggle en modo light" width="45%">
+     <img src="img/screenshots/toggle_dark.png" alt="Captura del toggle en modo dark" width="45%">
+   </div>
 
 2. **Loader Temático**:
    - *¿Qué hace?* Muestra un cargador inicial adaptado al modo activo ("Bienvenidos" vs "Bienvenido al infierno") con un efecto *fade out* luego de 1.2 segundos.
